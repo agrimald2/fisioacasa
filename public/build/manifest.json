@@ -1,0 +1,20 @@
+{
+  "resources/fonts/fisioacasa/Somatic-Rounded.otf": {
+    "file": "assets/Somatic-Rounded.a79f350f.otf",
+    "src": "resources/fonts/fisioacasa/Somatic-Rounded.otf"
+  },
+  "resources/fonts/fisioacasa/Rubik-Regular.ttf": {
+    "file": "assets/Rubik-Regular.b83ed688.ttf",
+    "src": "resources/fonts/fisioacasa/Rubik-Regular.ttf"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app.d426e523.js",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "assets/app.de7541a9.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  }
+}

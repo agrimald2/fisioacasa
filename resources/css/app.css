@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/fisioacasa/Rubik-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Somatic';
+    src: url('../fonts/fisioacasa/Somatic-Rounded.otf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
