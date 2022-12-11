@@ -31,7 +31,7 @@ class PreRegisterMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Pre Register Mail',
+            subject: 'Gracias por Registrarte',
         );
     }
 

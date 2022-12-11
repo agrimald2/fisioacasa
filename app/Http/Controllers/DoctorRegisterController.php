@@ -43,7 +43,7 @@ class DoctorRegisterController extends Controller
             } else {
 
                 $birthdate = Carbon::parse($fisio->nacimiento);
-                $input_bd = $birthdate->format('m-d-Y');
+                $input_bd = Carbon::createFromFormat('Y-d-m',$fisio->birthdate)->format('m-d-Y');
 
                 return view('fisio.register.register', compact('fisio', 'input_bd'));
             }
@@ -89,10 +89,6 @@ class DoctorRegisterController extends Controller
                 'max:255',
                 Rule::unique(User::class),
             ],
-            'phone' => [
-                'required',
-                'regex:/(9)[0-9]{8}/',
-            ]
         ]);
 
 

@@ -23,7 +23,7 @@ return new class extends Migration
             */
             $table->integer('role')->default(1);
 
-            $table->string('dni')->unique();
+            $table->string('dni')->unique()->nullable();
             $table->string('name');
             $table->string('surname');
             $table->string('sex');
