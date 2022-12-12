@@ -16,7 +16,7 @@
                     profesionales
                     colegiados y certificados.
                 </p>
-                <a href="https://fisioterapeuta.fisioacasa.pe/#requirements"
+                <a href="https://fisioterapeutas.fisioacasa.pe/#requirements"
                     style="background-color: #ED6C14; padding: 10px!important; border-radius: 10px; text-decoration: none!important; color:white">
                     Requerimientos
                 </a>

@@ -16,7 +16,7 @@ use App\Http\Controllers\DoctorRegisterController;
 */
 
 Route::get('/', function () {
-    return redirect('https://fisioterapeuta.fisioacasa.pe');
+    return redirect('https://fisioterapeutas.fisioacasa.pe');
 });
 
 Route::middleware([
