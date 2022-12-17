@@ -125,7 +125,7 @@ class DoctorRegisterController extends Controller
             ],
             'phone' => [
                 'required',
-                'regex:/(9)[0-9]{8}/',
+                '',
             ]
         ]);
 

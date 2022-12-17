@@ -16,12 +16,13 @@
 
             <form method="POST" action="{{ route('fisio.register.finish') }}" style="font-family: 'Rubik';">
                 @csrf
-                <div class="mt-4">
+                <div class="mt-4 mb-2">
                     <x-jet-label for="dni" value="{{ __('DNI') }}" />
                     <x-jet-input id="dni" class="block mt-1 w-full" type="tel" name="dni"
                         value="{{ $fisio->dni }}" required />
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-6" style="margin-top: 1rem;">
                     <div class="">
                         <x-jet-label for="name" value="{{ __('Nombres') }}" />
                         <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name"
@@ -75,7 +76,7 @@
                 <div class="mt-4">
                     <x-jet-label for="phone" value="{{ __('WhatsApp (número +51)') }}" />
                     <x-jet-input id="phone" class="block mt-1 w-full" type="tel" name="phone"
-                        :value="old('phone')" required pattern="[789][0-9]{9}" oninvalid="this.setCustomValidity('Ingresa un Celular válido')"/>
+                        :value="old('phone')" required pattern="    [0-9]{9}" oninvalid="this.setCustomValidity('Ingresa un Celular válido')"/>
                 </div>
 
                 <div class="mt-4">
