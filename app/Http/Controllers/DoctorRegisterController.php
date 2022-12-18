@@ -105,7 +105,7 @@ class DoctorRegisterController extends Controller
             'email' => $request->email,
         ]);
 
-        $this->sendEmail($fisio);
+        //$this->sendEmail($fisio);
         //$this->sendWhatsapp($fisio);
 
         return view('fisio.register.thanks', compact('fisio'));
@@ -136,7 +136,7 @@ class DoctorRegisterController extends Controller
 
         $fisio->save();
 
-        $this->sendEmail($fisio);
+        //$this->sendEmail($fisio);
         //$this->sendWhatsapp($fisio);
 
         return view('fisio.register.thanks', compact('fisio'));
