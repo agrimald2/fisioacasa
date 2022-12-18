@@ -1,5 +1,6 @@
 <x-guest-layout>
     <x-jet-authentication-card style="text-align:center">
+        @include('fisio.register.whatsapp')
         <h4 style="font-family: 'Somatic'; text-align:center; font-size:1.2rem; margin-bottom:2rem">
             Datos Personales
         </h4>
