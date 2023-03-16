@@ -1,6 +1,6 @@
 <template>
   <div class="row center no-pd" style="margin-left: -0.45rem">
-    <h5 class="text-center">
+    <h5 class="text-center color-blue">
       Información Académica
       <span>
         <i
@@ -16,14 +16,14 @@
       </span>
     </h5>
     <div class="row center no-pd no-row">
-      <div class="row register_container center no-pd margin-center">
+      <div class="row register_container center no-pd margin-center bg-orange">
         <div class="col-12 right_side">
           <div class="row">
             <div class="col-12 mt-2">
-              <label for="distric">GRADO</label>
+              <label for="resume_path" class="form-label"><h6 for="resume_path" class="docs_label">GRADO</h6></label>
               <select
                 id="degree"
-                class="form-select"
+                class="form-select inputs"
                 aria-label="Default select example"
                 v-model="degree"
               >
@@ -38,10 +38,10 @@
               </select>
             </div>
             <div class="col-12 mt-2">
-              <label for="distric">UNIVERSIDAD</label>
+              <label for="resume_path" class="form-label"><h6 for="resume_path" class="docs_label">UNIVERSIDAD</h6></label>
               <select
                 id="university"
-                class="form-select"
+                class="form-select inputs"
                 aria-label="Default select example"
                 v-model="university"
               >
@@ -56,10 +56,10 @@
               </select>
             </div>
             <div class="col-12 mt-2">
-              <label for="dni">AÑO DE EGRESO</label>
+              <label for="resume_path" class="form-label"><h6 for="resume_path" class="docs_label">AÑO DE EGRESO</h6></label>
               <select
                 id="graduation_year"
-                class="form-select"
+                class="form-select inputs"
                 aria-label="Default select example"
                 v-model="graduation_year"
               >
@@ -70,10 +70,10 @@
               </select>
             </div>
             <div class="col-12 mt-2">
-              <label for="distric">ESPECIALIDAD</label>
+              <label for="resume_path" class="form-label"><h6 for="resume_path" class="docs_label">ESPECIALIDAD</h6></label>
               <select
                 id="especialty"
-                class="form-select"
+                class="form-select inputs"
                 aria-label="Default select example"
                 v-model="especialty"
               >
@@ -88,9 +88,9 @@
               </select>
             </div>
             <div class="col-12 mt-2">
-              <label for="dni">REGISTRO DE ESPECIALIDAD</label>
+              <label for="resume_path" class="form-label"><h6 for="resume_path" class="docs_label">REGISTRO DE ESPECIALIDAD</h6></label>
               <input
-                class="form-control"
+                class="form-control inputs"
                 id="especialty_register"
                 type="text"
                 placeholder="REGISTRO DE ESPECIALIDAD"
@@ -177,5 +177,11 @@ export default {
 <style scoped>
 .right_side {
   padding: 1rem;
+}
+.docs_label{
+    color: whitesmoke;
+}
+.inputs{
+    background-color: #F0F0F0;
 }
 </style>

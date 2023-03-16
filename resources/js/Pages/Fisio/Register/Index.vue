@@ -101,7 +101,7 @@
             </div>
 
             <div class="row mt-2">
-              <label for="phone">WHATSAPP (Número Peruano)</label>
+              <label for="phone">WHATSAPP (Numero Peruano)</label>
               <input
                 class="form-control"
                 id="phone"

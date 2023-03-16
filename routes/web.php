@@ -24,8 +24,6 @@ Route::get('/', function () {
     return redirect()->away('https://pacientes.fisioacasa.pe');
 });
 
-
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

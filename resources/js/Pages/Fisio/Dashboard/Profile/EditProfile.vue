@@ -84,6 +84,13 @@ export default {
   padding: 2rem;
 }
 
+button:disabled,
+button[disabled] {
+  border: 2px solid #999999;
+  background-color: #ed6c14;
+  color: white;
+}
+
 @media (max-width: 721px) {
   .personal_right {
     padding-right: 0rem;

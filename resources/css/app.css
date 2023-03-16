@@ -37,11 +37,11 @@
 }
 
 .border-orange {
-    border: 1px solid #ed6c14;
+    border: 2px solid #ed6c14!important;
 }
 
 .border-blue {
-    border: 1px solid #00699e;
+    border: 2px solid #00699e;
 }
 
 .hr-blue {

@@ -1,7 +1,7 @@
 <template>
-  <div class="card mb-4 mb-xl-0">
+  <div class="card mb-4 mb-xl-0 border-orange">
     <div class="card-header" style="text-align: center">
-      <h6>{{ fisioName }}</h6>
+      <h6 class="color-blue text-xl font-bold">{{ fisioName }}</h6>
     </div>
     <div class="card-body text-center image_container">
       <form @submit.prevent="save">
@@ -12,14 +12,14 @@
             class="img-account-profile rounded-circle mb-2 avatar"
             src="http://bootdey.com/img/Content/avatar/avatar1.png"
             alt="Profile Photo"
-            style="height: 7.5rem !important; width: 7.5rem !important"
+            style="height: 8.5rem !important; width: 8.5rem !important"
           />
           <img
             v-else
             class="img-account-profile rounded-circle mb-2 avatar"
             :src="photoTemp"
             alt="Profile photo"
-            style="height: 7.5rem !important; width: 7.5rem !important"
+            style="height: 8.5rem !important; width: 8.5rem !important"
           />
         </label>
         <label v-else for="file-input">
@@ -28,17 +28,17 @@
             class="img-account-profile rounded-circle mb-2 avatar"
             :src="`/img/fisioPhotos/` + photoDataUrl"
             alt="Profile photo"
-            style="height: 7.5rem !important; width: 7.5rem !important"
+            style="height: 8.5rem !important; width: 8.5rem !important"
           />
           <img
             v-else
             class="img-account-profile rounded-circle mb-2 avatar"
             :src="photoTemp"
             alt="Profile photo"
-            style="height: 7.5rem !important; width: 7.5rem !important"
+            style="height: 8.5rem !important; width: 8.5rem !important"
           />
         </label>
-        <div class="small font-italic text-muted mb-4">
+        <div class="small font-italic mb-4 color-blue">
           Selecciona una foto JPG or PNG
         </div>
         <button v-if="photoTemp" class="btn btn-primary bg-blue" type="submit">
@@ -82,3 +82,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+img {
+    border: 5px solid #00699e;
+}
+</style>

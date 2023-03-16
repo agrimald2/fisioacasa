@@ -1,6 +1,6 @@
 <template>
   <div class="row center no-pd">
-    <h5 class="text-center">
+    <h5 class="text-center color-blue">
       Documentación
       <span>
         <i
@@ -16,7 +16,7 @@
       </span>
     </h5>
     <div class="row center no-pd no-row">
-      <div class="row register_container center no-pd margin-center">
+      <div class="row register_container center no-pd margin-center bg-orange">
         <div class="row right_side">
           <form @submit.prevent="submit">
             <div class="col-12 mt-2 doc_input_container">
@@ -25,7 +25,7 @@
                   ><h6 for="resume_path" class="docs_label">CURRICULUM VITAE</h6></label
                 >
                 <input
-                  class="form-control"
+                  class="form-control inputs"
                   type="file"
                   id="resume_path"
                   name="resume"
@@ -41,7 +41,7 @@
                   </h6></label
                 >
                 <input
-                  class="form-control"
+                  class="form-control inputs"
                   type="file"
                   id="criminal_record_path"
                   name="criminal_record"
@@ -57,7 +57,7 @@
                   </h6></label
                 >
                 <input
-                  class="form-control"
+                  class="form-control inputs"
                   type="file"
                   id="police_record_path"
                   name="police_record"
@@ -73,7 +73,7 @@
                   </h6></label
                 >
                 <input
-                  class="form-control"
+                  class="form-control inputs"
                   type="file"
                   id="profesional_hability_path"
                   name="profesional_hability"
@@ -150,5 +150,9 @@ export default {
 <style scoped>
 .docs_label {
   margin-right: 1rem;
+  color: whitesmoke;
+}
+.inputs {
+  background-color: #f0f0f0;
 }
 </style>
