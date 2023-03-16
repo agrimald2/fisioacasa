@@ -11,11 +11,11 @@
 }
 
 .btn-orange {
-    background-color: #ed6c14;
-    color: white;
-    font-weight: bolder;
-    font-size: 0.8rem;
-    text-transform: uppercase;
+    background-color: #ed6c14!important;
+    color: white!important;
+    font-weight: bolder!important;
+    font-size: 0.8rem!important;
+    text-transform: uppercase!important;
 }
 
 .btn-orange:hover {

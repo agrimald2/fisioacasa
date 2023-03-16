@@ -20,7 +20,7 @@
             <button
               v-if="dni.length == 8"
               @click="validateDNI()"
-              class="btn btn-orange mt-1"
+              class="btn btn-orange mt-1 "
             >
               Siguiente
             </button>
