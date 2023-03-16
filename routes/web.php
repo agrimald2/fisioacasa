@@ -21,12 +21,7 @@ use App\Http\Controllers\Appointment\AppointmentController;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    return redirect()->away('https://pacientes.fisioacasa.pe');
 });
 
 Route::middleware([
