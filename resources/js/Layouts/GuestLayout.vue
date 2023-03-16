@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <main id="main" class="center row">
+      <slot />
+    </main>
+  </div>
+</template>
+<style>
+#main {
+  min-height: 100vh;
+  background-color: #00699e;
+  --bs-gutter-x: 0rem !important;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

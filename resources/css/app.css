@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-orange {
+    background-color: #ed6c14;
+}
+
+.bg-blue {
+    background-color: #00699e;
+}
+
+.btn-orange {
+    background-color: #ed6c14;
+    color: white;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.btn-orange:hover {
+    background-color: #00699e !important;
+    color: white !important;
+}
+
+.btn-blue {
+    background-color: #00699e !important;
+    color: white !important;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.btn-blue:hover {
+    background-color: #ed6c14 !important;
+    color: white;
+}
+
+.border-orange {
+    border: 1px solid #ed6c14;
+}
+
+.border-blue {
+    border: 1px solid #00699e;
+}
+
+.hr-blue {
+    background-color: #00699e !important;
+    height: 5px !important;
+    opacity: 0.9;
+}
+
+.hr-orange {
+    background-color: #00699e !important;
+    height: 5px !important;
+    opacity: 0.9;
+}
+
+.margin-center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.no-row {
+    --bs-gutter-x: 0rem !important;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d2d6da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.5rem;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.orange-border {
+    border: 1px solid #ed6c14;
+}
+
+.color-orange {
+    color: #ed6c14;
+}
+
+.color-blue {
+    color: #00699e;
+}
+
+.color-white {
+    color: #F0F0F0;
+}
+
+
+.btn-orange:disabled,
+.btn-orange[disabled] {
+  border: none;
+  background-color: #ed6c14;
+  color: white;
+}
