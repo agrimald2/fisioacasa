@@ -2,9 +2,8 @@
   <div class="col-12 col-md-4 card see_days">
     <div class="card">
       <div class="card-header day_title" :style="{ 'background-color': headerColor }">
-        {{ day }} {{schedules}}
+        {{ day }}
       </div>
-      <!--
       <div class="card-body">
         <div
           v-for="schedule in schedules"
@@ -18,7 +17,6 @@
           </div>
         </div>
       </div>
-      -->
     </div>
   </div>
 </template>
