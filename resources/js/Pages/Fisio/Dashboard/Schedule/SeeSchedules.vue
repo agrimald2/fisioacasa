@@ -1,6 +1,8 @@
 <template>
   <Header :title="title" :subtitle="subtitle" />
 
+  {{schedules}}
+
   <div class="col-12 card mt-4 mb-4">
     <div class="row">
       <DaySchedule
