@@ -39,7 +39,12 @@
       >
         <div class="ms-md-auto pe-md-3 d-flex align-items-center">
           <div class="input-group">
-            <input type="text" class="form-control" disabled :placeholder="fisio.surname" />
+            <input
+              type="text"
+              class="form-control"
+              disabled
+              :placeholder="fisio.surname"
+            />
           </div>
         </div>
         <ul class="navbar-nav justify-content-end">
@@ -110,10 +115,10 @@
             </ul>
           </li>
           <li class="nav-item d-flex align-items-center">
-            <a @click="logout" href="#" class="nav-link text-body font-weight-bold px-0">
+            <button @click="logout" class="nav-link text-body font-weight-bold px-0">
               <i class="fas fa-sign-out-alt me-sm-1"></i>
               <span class="d-sm-inline d-none">Salir</span>
-            </a>
+            </button>
           </li>
         </ul>
       </div>
@@ -121,6 +126,8 @@
   </nav>
 </template>
 <script>
+import axios from "axios";
+
 export default {
   props: ["fisio"],
 
@@ -145,7 +152,16 @@ export default {
       this.isMobile = window.innerWidth <= 768;
     },
     logout() {
-      this.$inertia.post("/logout");
+      axios
+        .post("/fisio/logout")
+        .then((response) => {
+          window.location.href = "/fisio/dashboard";
+        })
+        .catch((error) => {
+          window.location.href = "/fisio/dashboard";
+
+          console.error(error);
+        });
     },
   },
 };

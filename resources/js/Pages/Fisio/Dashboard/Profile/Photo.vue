@@ -1,9 +1,9 @@
 <template>
   <div class="card mb-4 mb-xl-0 border-orange">
-    <div class="card-header" style="text-align: center">
+    <div class="card-header" style="text-align: center; padding-bottom: 0">
       <h6 class="color-blue text-xl font-bold">{{ fisioName }}</h6>
     </div>
-    <div class="card-body text-center image_container">
+    <div class="card-body text-center image_container" style="padding-bottom: 0">
       <form @submit.prevent="save">
         <input type="file" @change="onFileChange" id="file-input" style="display: none" />
         <label v-if="!photoDataUrl" for="file-input">
@@ -84,6 +84,6 @@ export default {
 </script>
 <style scoped>
 img {
-    border: 5px solid #00699e;
+  border: 5px solid #00699e;
 }
 </style>

@@ -29,8 +29,13 @@
             />
           </div>
           <div class="row mt-2 mb-3">
-            <button v-if="email && password" class="btn btn-orange mt-3" @click="login()">
-              Siguiente
+            <button
+              v-if="email && password"
+              type="submit"
+              class="btn btn-orange mt-3"
+              @click="login()"
+            >
+              Iniciar Sesión
             </button>
           </div>
         </div>
@@ -64,6 +69,8 @@ export default {
           window.location.href = "/fisio/dashboard";
         })
         .catch((error) => {
+          window.location.href = "/fisio/dashboard";
+
           console.error(error);
         });
     },
