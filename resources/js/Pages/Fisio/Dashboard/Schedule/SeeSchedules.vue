@@ -29,8 +29,6 @@ export default {
   },
   data() {
     return {
-      //This is  anschedule Example
-
       schedule: [
         {
           weekday: "Lunes",
@@ -68,7 +66,6 @@ export default {
           schedules: [],
         },
       ],
-
       title: "Horario semanal",
       subtitle: "Haz click sobre un bloque para eliminarlo",
     };
@@ -76,6 +73,7 @@ export default {
 
   mounted() {
     this.populateSchedule(this.schedule, this.schedules);
+    console.log(this.populateSchedule(this.schedule, this.schedules))
   },
 
   methods: {
@@ -83,7 +81,7 @@ export default {
       // Loop through each weekday in the schedule array
       schedule.forEach((weekday) => {
         // Filter the blocks array to get the blocks for this weekday
-        const blocksForWeekday = blocks.filter((block) => {
+        let blocksForWeekday = blocks.filter((block) => {
           return block.week_day === weekday.weekday_number;
         });
 
