@@ -297,6 +297,7 @@ class FisioController extends Controller
         $locations = Location::where('fisio_id', $fisio->id)->get();
         $schedules = Schedule::where('fisio_id', $fisio->id)->with('location')->get();
 
+
         return inertia('Fisio/Dashboard/Schedule/Index', [
             'locations' => $locations,
             'schedules' => $schedules,

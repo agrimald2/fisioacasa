@@ -10,9 +10,7 @@
         :headerColor="'#00699e'"
       />
 
-      <pre v-for="day in schedule" :key="day.weekday">
-        {{day}}
-      </pre>
+        <button class="btn btn-orange" @click="populateSchedule(this.schedule, this.schedules)">POPU</button>
     </div>
   </div>
 </template>
@@ -72,8 +70,8 @@ export default {
   },
 
   mounted() {
-    this.populateSchedule(this.schedule, this.schedules);
-    console.log(this.populateSchedule(this.schedule, this.schedules))
+    //this.populateSchedule(this.schedule, this.schedules);
+    //console.log(this.populateSchedule(this.schedule, this.schedules))
   },
 
   methods: {
