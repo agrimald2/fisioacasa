@@ -9,8 +9,6 @@
         :schedules="day.schedules"
         :headerColor="'#00699e'"
       />
-
-        <button class="btn btn-orange" @click="populateSchedule(this.schedule, this.schedules)">POPU</button>
     </div>
   </div>
 </template>
@@ -70,8 +68,7 @@ export default {
   },
 
   mounted() {
-    //this.populateSchedule(this.schedule, this.schedules);
-    //console.log(this.populateSchedule(this.schedule, this.schedules))
+    this.populateSchedule(this.schedule, this.schedules);
   },
 
   methods: {
@@ -79,7 +76,7 @@ export default {
       // Loop through each weekday in the schedule array
       schedule.forEach((weekday) => {
         // Filter the blocks array to get the blocks for this weekday
-        let blocksForWeekday = blocks.filter((block) => {
+        const blocksForWeekday = blocks.filter((block) => {
           return block.week_day === weekday.weekday_number;
         });
 
