@@ -4,6 +4,7 @@
       <div class="card-header day_title" :style="{ 'background-color': headerColor }">
         {{ day }} {{schedules}}
       </div>
+      <!--
       <div class="card-body">
         <div
           v-for="schedule in schedules"
@@ -17,6 +18,7 @@
           </div>
         </div>
       </div>
+      -->
     </div>
   </div>
 </template>

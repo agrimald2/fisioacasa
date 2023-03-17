@@ -6,7 +6,7 @@
         v-for="day in schedule"
         :key="day.weekday"
         :day="day.weekday"
-        :schedules="day.schedules"
+        :schedules="day"
         :headerColor="'#00699e'"
       />
     </div>
