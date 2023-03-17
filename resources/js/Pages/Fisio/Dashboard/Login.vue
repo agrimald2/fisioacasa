@@ -11,7 +11,7 @@
             <input
               class="form-control"
               id="email"
-              type="tel"
+              type="email"
               placeholder="CORREO ELECTRÓNICO"
               aria-label="default input example"
               v-model="email"
@@ -23,7 +23,7 @@
               class="form-control"
               id="password"
               type="password"
-              placeholder="CORREO ELECTRÓNICO"
+              placeholder="CONTRASEÑA"
               aria-label="default input example"
               v-model="password"
             />
