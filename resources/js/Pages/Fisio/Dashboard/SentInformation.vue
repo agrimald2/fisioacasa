@@ -31,10 +31,10 @@
                 role="button"
                 >PRECIO</a
               >
-              <a class="btn btn-primary btn-lg notDone m-2" href="/" role="button"
+              <a class="btn btn-primary btn-lg notDone m-2" href="/fisio/location" role="button"
                 >UBICACIONES</a
               >
-              <a class="btn btn-primary btn-lg notDone m-2" href="/" role="button"
+              <a class="btn btn-primary btn-lg notDone m-2" href="/fisio/schedules" role="button"
                 >HORARIOS</a
               >
             </div>
