@@ -45,7 +45,11 @@
                     <option v-if="!locations" selected disabled>
                       Aún no tienes ninguna Ubicación, agrega una nueva
                     </option>
-                    <option v-for="location in locations" :key="location.id" :value="location.id">
+                    <option
+                      v-for="location in locations"
+                      :key="location.id"
+                      :value="location.id"
+                    >
                       {{ location.name }} - {{ location.address }}
                     </option>
                     <option v-if="locations" disabled>O agrega una nueva</option>
@@ -134,7 +138,7 @@
                           <loader v-if="loading" />
                           <button
                             v-if="!loading"
-                            style="color: white"
+                            style="color: white; background-color: #ed6c14"
                             @click="addPatientLocation"
                             class="btn bg-orange mt-2"
                           >

@@ -304,7 +304,6 @@ class FisioController extends Controller
         $location->fisio_id = $fisio->id;
         $location->address = $request->input('address');
         $location->name = $request->input('address_name');
-        $location->extra_info = $request->input('address_extra_info');
 
         $location->save();
     }

@@ -24,11 +24,11 @@
             A las <strong>{{ appointment.start_time }}</strong>
           </p>
           <i class="conf mt-2"
-            >Recibirás un mensaje de confirmación a tu whatsapp, al igual que tu link de
+            >Recibirás un mensaje de confirmación a tu Whatsapp, al igual que tu link de
             acceso a la plataforma.</i
           >
 
-          <div class="btn-orange btn mb-2">Ir a fisioacasa</div>
+          <div class="btn-orange btn mb-2"> <a href="http://fisioacasa.pe"> Ir a fisioacasa </a></div>
         </div>
       </div>
     </div>

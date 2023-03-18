@@ -60,16 +60,28 @@
                   </div>
                   <div class="form-group pt-2">
                     <div class="row d-flex">
-                      <div class="col-sm-4">
-                        <p class="text-warning mb-0">Expiración</p>
+                      <div class="col-sm-2 col-6">
+                        <p class="text-warning mb-0">Mes</p>
                         <input
                           type="text"
                           name="exp"
-                          placeholder="MM/YYYY"
-                          size="7"
+                          placeholder="MM"
+                          size="2"
                           id="exp"
-                          minlength="7"
-                          maxlength="7"
+                          minlength="2"
+                          maxlength="2"
+                        />
+                      </div>
+                      <div class="col-sm-3 col-6">
+                        <p class="text-warning mb-0">Año</p>
+                        <input
+                          type="text"
+                          name="exp"
+                          placeholder="YYYY"
+                          id="exp"
+                          size="4"
+                          minlength="4"
+                          maxlength="4"
                         />
                       </div>
                       <div class="col-sm-3">
@@ -144,11 +156,10 @@ export default {
       return format(modifiedDate, "eee d 'de' MMMM", { locale: esLocale, ...options });
     },
   },
-  mounted() {
-
-  },
+  watch: {},
+  mounted() {},
   components: {
-    loader
+    loader,
   },
   methods: {
     payAppointment() {

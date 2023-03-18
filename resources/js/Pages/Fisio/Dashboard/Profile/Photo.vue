@@ -38,10 +38,18 @@
             style="height: 8.5rem !important; width: 8.5rem !important"
           />
         </label>
-        <div class="small font-italic mb-4 color-blue">
+        <div v-if="!loading" class="small font-italic mb-4 color-blue">
           Selecciona una foto JPG or PNG
         </div>
-        <button v-if="photoTemp" class="btn btn-primary bg-blue" type="submit">
+        <div v-else class="small font-italic mb-4 color-orange">
+          Foto Subida con éxito!
+        </div>
+        <loader v-if="loading" />
+        <button
+          v-if="photoTemp && !loading"
+          class="btn btn-primary bg-blue"
+          type="submit"
+        >
           SUBIR ESTA FOTO
         </button>
       </form>
@@ -49,16 +57,22 @@
   </div>
 </template>
 <script>
+import Loader from "../../../../Modules/UI/Loader.vue";
+
 export default {
   props: ["photoUrl", "fisioName"],
 
   data() {
     return {
+      loading: false,
       photoFile: null,
       photoDataUrl: this.photoUrl,
       photoTemp: null,
       fisioName: this.fisioName,
     };
+  },
+  components: {
+    Loader,
   },
   methods: {
     onFileChange(e) {
@@ -77,7 +91,7 @@ export default {
           "Content-Type": "multipart/form-data",
         },
       });
-      // Reload the page or update the profile data
+      // Reload the page or update the profile data;
     },
   },
 };

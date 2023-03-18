@@ -7,7 +7,7 @@
       <div class="card-body text-center">
         <div class="form-group">
           <div class="row">
-            <div class="col-12 col-md-12">
+            <div class="col-12 col-md-6">
               <label for="search-input">DIRECCIÓN EXACTA</label>
               <input
                 id="search-input"
@@ -22,16 +22,6 @@
               <input
                 id="search-input"
                 v-model="address_name"
-                type="text"
-                class="form-control"
-                placeholder="Nombre"
-              />
-            </div>
-            <div class="col-12 col-md-6">
-              <label for="search-input">DESCRIPCIÓN (Opcional)</label>
-              <input
-                id="search-input"
-                v-model="address_extra_info"
                 type="text"
                 class="form-control"
                 placeholder="Nombre"
@@ -73,7 +63,6 @@ export default {
         "Elige las zonas dónde quisieras ofrecer tus servicios en un radio de hasta 2.5KM. Ejemplo: Tu domicilio, Centro de trabajo, etc.",
       address: null,
       address_name: null,
-      address_extra_info: null,
     };
   },
   methods: {
@@ -82,7 +71,6 @@ export default {
         .post(`/fisio/addLocation`, {
           address: this.address,
           address_name: this.address_name,
-          address_extra_info: this.address_extra_info,
         })
         .then((response) => {
           window.location.reload();

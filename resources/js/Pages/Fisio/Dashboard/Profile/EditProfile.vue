@@ -30,7 +30,7 @@
       </span>
       <button
         @click="sendToRevision()"
-        class="btn btn-next mt-3"
+        class="btn btn-blue mt-3"
         :disabled="!(hasDocumentation && hasAcademic)"
       >
         Enviar para revisión

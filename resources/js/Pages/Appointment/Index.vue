@@ -16,6 +16,9 @@
               placeholder="DNI"
               aria-label="default input example"
               v-model="dni"
+              size="8"
+              minlength="8"
+              maxlength="8"
             />
             <loader v-if="loading" />
             <button
@@ -115,6 +118,9 @@
                 placeholder="CELULAR"
                 aria-label="default input example"
                 v-model="phone"
+                size="9"
+                minlength="9"
+                maxlength="9"
               />
             </div>
             <div class="row mt-2">
@@ -123,7 +129,7 @@
                 autocomplete="off"
                 class="form-control"
                 id="email"
-                type="tel"
+                type="email"
                 placeholder="CORREO ELECTRÓNICO"
                 aria-label="default input example"
                 v-model="email"

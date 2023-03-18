@@ -15,6 +15,9 @@
               type="tel"
               placeholder="DNI"
               aria-label="default input example"
+              size="4"
+              minlength="4"
+              maxlength="4"
               v-model="dni"
             />
             <loader v-if="loading" />
@@ -112,6 +115,9 @@
                 pattern="9[0-9]{0,8}"
                 placeholder="CELULAR"
                 aria-label="default input example"
+                size="9"
+                minlength="9"
+                maxlength="9"
                 v-model="phone"
               />
             </div>
@@ -136,7 +142,9 @@
                 aria-label="default input example"
                 v-model="password"
               />
-              <span class="btn-blue showPass" @click="showPasswordBtn">Mostrar Contraseña</span>
+              <span class="btn-blue showPass" @click="showPasswordBtn"
+                >Mostrar Contraseña</span
+              >
             </div>
             <div class="row mt-2">
               <loader v-if="loading" />
@@ -241,8 +249,8 @@ export default {
 </script>
 
 <style>
-.showPass:hover{
-    cursor: pointer;
+.showPass:hover {
+  cursor: pointer;
 }
 .pre_container {
   --bs-gutter-x: 0rem !important;

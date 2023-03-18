@@ -22,11 +22,14 @@
             <input
               class="form-control"
               id="password"
-              type="password"
+              :type="showPassword ? 'text' : 'password'"
               placeholder="CONTRASEÑA"
               aria-label="default input example"
               v-model="password"
             />
+            <span class="btn-blue showPass" @click="showPasswordBtn"
+              >Mostrar Contraseña</span
+            >
           </div>
           <div class="row mt-2 mb-3">
             <button
@@ -53,6 +56,7 @@ export default {
     return {
       email: "",
       password: "",
+      showPassword: false,
     };
   },
   components: {
@@ -74,10 +78,16 @@ export default {
           console.error(error);
         });
     },
+    showPasswordBtn() {
+      this.showPassword = !this.showPassword;
+    },
   },
 };
 </script>
 <style scoped>
+.showPass:hover{
+    cursor: pointer;
+}
 .pre_container {
   --bs-gutter-x: 0rem !important;
 }
