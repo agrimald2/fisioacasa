@@ -38,7 +38,7 @@
             >
               <i class="fas fa-tachometer-alt"></i>
             </div>
-            <span class="nav-link-text ms-1">Dashboard</span>
+            <span class="nav-link-text ms-1">Inicio</span>
           </a>
         </li>
         <li class="nav-item">

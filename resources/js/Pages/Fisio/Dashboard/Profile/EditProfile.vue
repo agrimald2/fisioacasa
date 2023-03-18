@@ -22,7 +22,7 @@
     <div class="col-md-6 col-12 info_container">
       <Documentation :completed="hasDocumentation" />
     </div>
-    <div class="row mt-2 text-center">
+    <div class="row mt-2 text-center margin-center">
       <span v-if="!(hasDocumentation && hasAcademic)">
         Completa todas las secciones para enviar a revisión:
         <span v-if="!hasAcademic" style="color: red">Información Académica, </span>

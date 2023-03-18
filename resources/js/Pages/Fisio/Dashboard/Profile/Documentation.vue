@@ -17,7 +17,7 @@
     </h5>
     <div class="row center no-pd no-row">
       <div class="row register_container center no-pd margin-center bg-orange">
-        <div class="row right_side">
+        <div class="row right_side margin-center" style="padding: 10px 0">
           <form @submit.prevent="submit">
             <div class="col-12 mt-2 doc_input_container">
               <div class="mb-3">
