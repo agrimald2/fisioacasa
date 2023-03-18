@@ -8,6 +8,7 @@ use App\Models\Fisio;
 use App\Models\Patient;
 use App\Models\Appointment;
 
+use App\Models\PatientLocation;
 use App\Models\Schedule;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -81,10 +82,12 @@ class AppointmentController extends Controller
     {
         $patient = Patient::where('document', $dni)->first();
         $especialties = Especialty::query()->get();
+        $locations = PatientLocation::where('patient_id', $patient->id)->get();
 
         return Inertia::render('Appointment/Selection', [
             'patient' => $patient,
             'especialties' => $especialties,
+            'locations' => $locations
         ]);
     }
 
@@ -100,7 +103,9 @@ class AppointmentController extends Controller
         $dayOfTheWeek = Carbon::parse($selectedDate)->dayOfWeek;
 
         //SUNDAY FIX
-        if($dayOfTheWeek == 0){$dayOfTheWeek = 7;}
+        if ($dayOfTheWeek == 0) {
+            $dayOfTheWeek = 7;
+        }
 
         $filteredSchedules = Schedule::whereHas('fisio', function ($query) use ($selectedSpecialty) {
             $query->whereHas(
@@ -111,9 +116,6 @@ class AppointmentController extends Controller
             );
         })->with('fisio')->where('start_time', $startTime)->where('week_day', $dayOfTheWeek)->get();
 
-        logs()->info('DíaDeLaSemana:'.$dayOfTheWeek);
-        logs()->info('HoraDeInicio:'.$startTime);
-
         return $filteredSchedules;
     }
 
@@ -122,7 +124,7 @@ class AppointmentController extends Controller
 
 
         $patient = Patient::find($request->input('patient_id'));
-
+        $location = PatientLocation::find($request->input('location_id'));
         $appointment = new Appointment;
 
         $appointment->fisio_id = $request->input('fisio_id');
@@ -134,9 +136,9 @@ class AppointmentController extends Controller
         $appointment->start_time = $request->input('start_time');
         $appointment->end_time = $request->input('end_time');
 
-        $appointment->location_id = 1;
-        $appointment->address = 'Madre Selva 121';
-        $appointment->address_extra_info = 'Depa 401';
+        $appointment->location_id = $location->id;
+        $appointment->address = $location->address;
+        $appointment->address_extra_info = $location->extra_info;
         $appointment->address_latitude = '-12.116503';
         $appointment->address_longitude = '-76.974966';
 
@@ -147,11 +149,11 @@ class AppointmentController extends Controller
 
         $appointment->save();
 
-        $first = substr($appointment->date,0,1);
+        $first = substr($appointment->date, 0, 1);
         $second = $patient->id;
         $third = $appointment->id;
 
-        $code = $first.$second.$third;
+        $code = $first . $second . $third;
 
         $appointment->code = $code;
         $appointment->update();
@@ -177,8 +179,8 @@ class AppointmentController extends Controller
 
     public function sendConfirmation($phone, $appointment_info, $template)
     {
-        $token = env('CHATAPI_TOKEN');
-        $instanceId = env('CHATAPI_INSTANCE_ID');
+        $token = 'e5l6xh2x9oam8gjm';
+        $instanceId = '449221';
         $namespace = env('CHATAPI_NAMESPACE');
 
         if ($token == null || $instanceId == null) {
@@ -238,7 +240,8 @@ class AppointmentController extends Controller
 
         $request = Http::post($url, $data);
 
-        return $request->json();;
+        return $request->json();
+        ;
     }
 
     public function thanks($id)
@@ -248,5 +251,28 @@ class AppointmentController extends Controller
         return Inertia::render('Appointment/Thanks', [
             'appointment' => $appointment,
         ]);
+    }
+
+    public function addPatientLocation(Request $request)
+    {
+        $patient = Patient::find($request->input('patient_id'));
+        $location = new PatientLocation;
+
+        $location->patient_id = $patient->id;
+        $location->address = $request->input('address');
+        $location->name = $request->input('address_name');
+        $location->extra_info = $request->input('address_extra_info');
+
+        $location->save();
+
+        $locations = PatientLocation::where('patient_id', $patient->id)->get();
+
+        return $locations;
+    }
+
+    public function getPatientLocation(Request $request){
+        $location = PatientLocation::find($request->input('location_id'));
+
+        return $location;
     }
 }

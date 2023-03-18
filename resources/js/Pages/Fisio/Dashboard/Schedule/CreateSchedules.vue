@@ -167,7 +167,6 @@ export default {
         });
     },
     onChange() {
-      console.log(this.selectedWeekdays);
     },
   },
 };

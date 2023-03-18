@@ -197,6 +197,8 @@ export default {
           if (response.data == "SI") {
             window.location.href = "/appointment/" + this.dni;
           } else if (response.data == "ANTIGUO") {
+            //TODO Seleccionar Fisioterapeuta antiguo
+            window.location.href = "/appointment/" + this.dni;
             this.loading = false;
           } else {
             this.showForm = 1;

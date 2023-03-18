@@ -68,7 +68,7 @@ Route::prefix('fisio')
         Route::get('/profile', [FisioController::class, 'profile']);
     });
 
-Route::prefix('appointment')
+    Route::prefix('appointment')
     ->name('appointment.')
     ->group(function () {
         Route::get('/', [AppointmentController::class, 'index'])->name('index');
@@ -78,4 +78,6 @@ Route::prefix('appointment')
         Route::post('/searchFisio', [AppointmentController::class, 'searchFisio'])->name('searchFisio');
         Route::post('/payAppointment', [AppointmentController::class, 'payAppointment'])->name('payAppointment');
         Route::get('/thanks/{id}', [AppointmentController::class, 'thanks'])->name('thanks');
+        Route::post('/addPatientLocation', [AppointmentController::class, 'addPatientLocation']);
+        Route::get('/getPatientLocation', [AppointmentController::class, 'getPatientLocation']);
     });

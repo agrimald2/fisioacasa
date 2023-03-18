@@ -39,7 +39,6 @@
             </div>
           </div>
         </div>
-        <div ref="map" class="map"></div>
         <button
           :disabled="!address_name || !address"
           style="color: white"

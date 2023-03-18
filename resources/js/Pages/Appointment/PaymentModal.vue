@@ -22,13 +22,13 @@
           <div class="modal-body">
             <div class="card mx-auto mb-2">
               <h5 class="heading text-center color-blue font-bold text-xl">
-                PAGA TU CITA
+                PAGA TU CITA {{ location }}
               </h5>
               <p class="heading text-center" style="color: black">
                 Con el Fisioterapeuta
                 <span class="info"> {{ appointmentInfo.fisio.name }} </span> el día
                 <span class="info">{{ formattedDate }} </span> a las
-                <span class="info">{{ appointmentInfo.start_time }}</span> en CASA 1
+                <span class="info">{{ appointmentInfo.start_time }}</span>
               </p>
               <p class="center">
                 Precio : S/.{{ appointmentInfo.fisio.appointment_price }}
@@ -119,6 +119,7 @@
 </template>
 <script>
 import axios from "axios";
+import loader from "../../Modules/UI/Loader.vue";
 import { ref } from "vue";
 import { format } from "date-fns";
 import { addDays } from "date-fns";
@@ -126,7 +127,7 @@ import esLocale from "date-fns/esm/locale/es/index.js";
 import { utcToZonedTime } from "date-fns-tz";
 
 export default {
-  props: ["appointmentInfo", "Appdate", "patient"],
+  props: ["appointmentInfo", "Appdate", "patient", "location"],
   data() {
     return {
       loading: false,
@@ -143,6 +144,12 @@ export default {
       return format(modifiedDate, "eee d 'de' MMMM", { locale: esLocale, ...options });
     },
   },
+  mounted() {
+
+  },
+  components: {
+    loader
+  },
   methods: {
     payAppointment() {
       this.loading = true;
@@ -158,6 +165,7 @@ export default {
           fisio_win: this.appointmentInfo.fisio.fisio_price,
           transport_price: this.appointmentInfo.fisio.transport_price,
           fisio_name: this.appointmentInfo.fisio.name,
+          location_id: this.location,
         })
         .then((response) => {
           console.log("pagado");

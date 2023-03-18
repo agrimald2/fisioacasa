@@ -62,8 +62,6 @@ class FisioController extends Controller
 
     public function create(Request $request)
     {
-        logs()->warning($request);
-
         $fisio = new Fisio;
         $fisio->name = $request->input('name');
         $fisio->email = $request->input('email');
@@ -89,8 +87,8 @@ class FisioController extends Controller
     public function sendRegister($phone)
     {
         $template = 'fisio_register_test';
-        $token = env('CHATAPI_TOKEN');
-        $instanceId = env('CHATAPI_INSTANCE_ID');
+        $token = 'e5l6xh2x9oam8gjm';
+        $instanceId = '449221';
         $namespace = env('CHATAPI_NAMESPACE');
 
         if ($token == null || $instanceId == null) {
@@ -166,8 +164,6 @@ class FisioController extends Controller
         $pastAppointments = Appointment::where('fisio_id', $fisio->id)->with('patient')->where('status', 1)->get();
         $pendingAppointments = Appointment::where('fisio_id', $fisio->id)->with('patient')->where('status', 0)->get();
 
-        logs()->warning($pastAppointments);
-
         return Inertia::render('Fisio/Dashboard/Index', [
             'fisio' => $fisio,
             'resume_url' => $fisio->resume_url,
@@ -229,8 +225,6 @@ class FisioController extends Controller
     {
         $fisio = Auth::guard('fisio')->user();
 
-        logs()->warning($request);
-
         if ($request->hasFile('resume')) {
             $resumePath = $request->file('resume')->store('resumes');
             $fisio->resume_path = $resumePath;
@@ -281,7 +275,6 @@ class FisioController extends Controller
 
     public function updatePrice(Request $request)
     {
-        logs()->warning($request);
         $fisio = Auth::guard('fisio')->user();
 
         $fisio->appointment_price = $request->input('appointment_price');

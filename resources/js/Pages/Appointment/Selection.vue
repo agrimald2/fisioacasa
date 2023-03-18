@@ -30,23 +30,128 @@
                       {{ specialty.name }}
                     </option>
                   </select>
-                  <div class="d-flex align-items-center mx-1 bg-blue px-2 py-2 rounded">
-                    <i class="fa fa-caret-down ml-2" aria-hidden="true"></i>
-                  </div>
                 </div>
               </div>
             </div>
             <div class="row no-row register_container center mb-2">
               <div class="row form-group pt-2 my-0">
-                <label for="exampleFormControlSelect1">SELECCIONA TU UBICACIÓN</label>
+                <label for="exampleFormControlSelect1">SELECCIONA TU UBICACIÓN </label>
                 <div class="d-flex align-items-center">
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>CASA PRINCIPAL - Madre Selva 121</option>
-                    <option>CASA MARCELO - Jr. Tasso 469</option>
-                    <option>OFICINA SANI - Av. José Galvez Barrenechea 468</option>
+                  <select
+                    class="form-control"
+                    id="exampleFormControlSelect1"
+                    v-model="location"
+                  >
+                    <option v-if="!locations" selected disabled>
+                      Aún no tienes ninguna Ubicación, agrega una nueva
+                    </option>
+                    <option v-for="location in locations" :key="location.id" :value="location.id">
+                      {{ location.name }} - {{ location.address }}
+                    </option>
+                    <option v-if="locations" disabled>O agrega una nueva</option>
                   </select>
-                  <div class="d-flex align-items-center mx-1 bg-blue px-2 py-2 rounded">
-                    <i class="fa fa-caret-down ml-2" aria-hidden="true"></i>
+                  <div class="d-flex align-items-center mx-1 bg-orange px-2 py-2 rounded">
+                    <i class="fa-solid fa-circle-plus color-white"></i>
+                    <button
+                      class="color-white font-bold ml-1"
+                      data-toggle="modal"
+                      data-target="#addLocationModal"
+                    >
+                      Nueva
+                    </button>
+                  </div>
+                </div>
+                <div
+                  style="max-width: 100vw; max-height: 100vh; padding-top: 10vw"
+                  class="modal fade"
+                  id="addLocationModal"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="addLocationModal"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <div class="card mx-auto mb-2">
+                          <h5 class="heading text-center color-blue font-bold text-xl">
+                            AGREGA UNA NUEVA DIRECCIÓN
+                          </h5>
+                          <p class="heading text-center" style="color: black">
+                            Bla bla bla bla disclamimer
+                          </p>
+                        </div>
+                        <div class="card mx-auto" style="padding-top: 0; border: none">
+                          <div class="form-group">
+                            <div class="row">
+                              <div class="col-12 col-md-12">
+                                <label class="location_label" for="search-input"
+                                  >Dirección
+                                  <span class="examples"
+                                    >(Agrega Número de Calle)</span
+                                  ></label
+                                >
+                                <input
+                                  id="search-input"
+                                  v-model="address"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Calle fisioacasa 123"
+                                />
+                              </div>
+                              <div class="col-12 col-md-12">
+                                <label class="location_label" for="search-input"
+                                  >Información Adicional
+                                  <span class="examples"
+                                    >(N° Depa, Casa, etc)</span
+                                  ></label
+                                >
+                                <input
+                                  id="search-input"
+                                  v-model="address_extra_info"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Departamento 101"
+                                />
+                              </div>
+                              <div class="col-12 col-md-12">
+                                <label class="location_label" for="search-input"
+                                  >Nombre
+                                  <span class="examples">
+                                    (Casa Principal | Oficina)</span
+                                  ></label
+                                >
+                                <input
+                                  id="search-input"
+                                  v-model="address_name"
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Oficina"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <loader v-if="loading" />
+                          <button
+                            v-if="!loading"
+                            style="color: white"
+                            @click="addPatientLocation"
+                            class="btn bg-orange mt-2"
+                          >
+                            Agregar Ubicación
+                          </button>
+                          <button
+                            type="button"
+                            class="close mt-2"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                            id="close"
+                          >
+                            Cerrar <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -128,6 +233,7 @@
                         :appointmentInfo="schedule"
                         :Appdate="selectedDate"
                         :patient="patient"
+                        :location="location"
                       />
 
                       <br />
@@ -163,7 +269,7 @@ import { Spanish } from "flatpickr/dist/l10n/es.js";
 import PaymentModal from "./PaymentModal.vue";
 
 export default {
-  props: ["patient", "especialties"],
+  props: ["patient", "especialties", "locations"],
   data() {
     return {
       loading: false,
@@ -212,11 +318,13 @@ export default {
         readonly: false,
         minDate: new Date(new Date().getTime() + 24 * 60 * 60 * 1000),
       },
+      location: null,
       showList: false,
       selectedHour: null,
       selectedDate: null,
       selectedEspecialty: null,
       schedulesWithFisios: null,
+      locations: this.locations,
     };
   },
   components: {
@@ -243,13 +351,43 @@ export default {
           console.error(error);
         });
     },
+    addPatientLocation() {
+      this.loading = true;
+      axios
+        .post(`/appointment/addPatientLocation`, {
+          patient_id: this.patient.id,
+          address: this.address,
+          address_name: this.address_name,
+          address_extra_info: this.address_extra_info,
+        })
+        .then((response) => {
+          this.loading = false;
+          document.getElementById("close").click();
+          this.locations = response.data;
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
   },
 };
 </script>
 
 <style scoped>
-.hover-orange:hover{
-    border: 2px solid #ed6c14;
+.location_label {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ed6c14;
+  margin-top: 1rem;
+}
+.examples {
+  color: lightgray;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+.hover-orange:hover {
+  border: 2px solid #ed6c14;
 }
 #addOption {
   padding: 0.5rem 1rem;
