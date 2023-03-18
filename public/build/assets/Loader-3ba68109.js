@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper-c27b6911.js";import{o,e as r}from"./app-24971cb9.js";const _={},n={class:"loader margin-center"};function t(c,s){return o(),r("span",n)}const i=e(_,[["render",t]]);export{i as L};

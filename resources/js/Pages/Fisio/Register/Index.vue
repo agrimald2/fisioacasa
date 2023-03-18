@@ -17,10 +17,11 @@
               aria-label="default input example"
               v-model="dni"
             />
+            <loader v-if="loading" />
             <button
-              v-if="dni.length == 8"
+              v-if="dni.length == 8 && !loading"
               @click="validateDNI()"
-              class="btn btn-orange mt-1 "
+              class="btn btn-orange mt-1"
             >
               Siguiente
             </button>
@@ -42,7 +43,8 @@
             <div class="row mt-2">
               <label for="name">NOMBRES</label>
               <input
-                class="form-control" autocomplete="off"
+                class="form-control"
+                autocomplete="off"
                 id="name"
                 type="text"
                 placeholder="NOMBRE COMPLETO"
@@ -53,7 +55,8 @@
             <div class="row mt-2">
               <label for="name">APELLIDOS</label>
               <input
-                class="form-control" autocomplete="off"
+                class="form-control"
+                autocomplete="off"
                 id="surname"
                 type="text"
                 placeholder="APELLIDOS"
@@ -135,8 +138,9 @@
               />
             </div>
             <div class="row mt-2">
+              <loader v-if="loading" />
               <button
-                v-if="email && phone"
+                v-if="email && phone && !loading"
                 class="btn btn-orange mt-3"
                 @click="registerFisio()"
               >
@@ -150,11 +154,13 @@
   </GuestLayout>
 </template>
 <script>
+import loader from "../../../Modules/UI/Loader.vue";
 import axios from "axios";
 import GuestLayout from "../../../Layouts/GuestLayout.vue";
 export default {
   data() {
     return {
+      loading: false,
       dni: "",
       document: "",
       name: "",
@@ -171,10 +177,11 @@ export default {
   },
   components: {
     GuestLayout,
+    loader,
   },
   methods: {
     validateDNI() {
-      console.log(this.dni);
+      this.loading = true;
       axios
         .get("/fisio/validateDNI", {
           params: {
@@ -194,6 +201,7 @@ export default {
             this.email = response.data.email;
             this.phone = response.data.phone;
             this.password = response.data.password;
+            this.loading = false;
           }
         })
         .catch((error) => {

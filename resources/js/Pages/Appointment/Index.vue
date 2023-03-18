@@ -186,7 +186,6 @@ export default {
   },
   methods: {
     validateDNI() {
-      console.log(this.dni);
       this.loading = true;
       axios
         .get("/appointment/validateDNI", {
@@ -197,7 +196,6 @@ export default {
         .then((response) => {
           if (response.data == "SI") {
             window.location.href = "/appointment/" + this.dni;
-            this.loading = false;
           } else if (response.data == "ANTIGUO") {
             this.loading = false;
           } else {
