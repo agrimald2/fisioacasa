@@ -135,7 +135,6 @@ export default {
       formData.append("profesional_hability", this.profesional_hability);
 
       await this.$inertia.post("/fisio/addDocumentationData", formData);
-      window.location.reload();
     },
   },
   computed: {
