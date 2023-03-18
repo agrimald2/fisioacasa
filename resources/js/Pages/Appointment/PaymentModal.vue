@@ -85,7 +85,9 @@
                         />
                       </div>
                       <div class="row mt-4">
+                        <loader v-if="loading" />
                         <button
+                          v-if="!loading"
                           type="button"
                           class="btn btn-primary paytext"
                           @click="payAppointment()"
@@ -127,6 +129,7 @@ export default {
   props: ["appointmentInfo", "Appdate", "patient"],
   data() {
     return {
+      loading: false,
       appointmentInfo: this.appointmentInfo,
       Appdate: this.Appdate,
       patient: this.patient,
@@ -142,6 +145,7 @@ export default {
   },
   methods: {
     payAppointment() {
+      this.loading = true;
       axios
         .post(`/appointment/payAppointment`, {
           patient_id: this.patient.id,

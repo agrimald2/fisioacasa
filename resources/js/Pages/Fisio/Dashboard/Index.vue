@@ -24,7 +24,7 @@
                 <p class="color-orange font-bold">No tienes citas pendientes</p>
               </div>
             </div>
-            <PastAppointments v-if="pastAppointments.length != 0" />
+            <PastAppointments v-if="pastAppointments.length != 0" :appointments="pastAppointments"/>
             <div v-else class="col-sm-6 md-col-12">
               <div class="card mb-4 text-center">
                 <p class="color-orange font-bold">Aún no haz realizado ninguna cita</p>

@@ -37,7 +37,9 @@
                 <td>
                   <div class="d-flex px-2 py-1">
                     <div class="d-flex flex-column justify-content-center">
-                      <h6 class="mb-0 text-sm lowercase">{{ appointment.patient.name }}</h6>
+                      <h6 class="mb-0 text-sm lowercase">
+                        {{ appointment.patient.name }}
+                      </h6>
                       <p class="text-xs text-secondary mb-0">
                         {{ appointment.patient.phone }}
                       </p>
@@ -72,9 +74,10 @@
                 <td class="align-middle">
                   <a
                     href="javascript:;"
-                    class="text-secondary font-weight-bold text-xs"
+                    class="font-weight-bold text-xs btn bg-orange btn-orange"
                     data-toggle="tooltip"
                     data-original-title="Ver user"
+                    @click="seeDetails(appointment.id)"
                   >
                     Ver
                   </a>
@@ -90,6 +93,11 @@
 <script>
 export default {
   props: ["appointments"],
+  methods: {
+    seeDetails(id) {
+      window.location.href = "/fisio/appointment/" + id;
+    },
+  },
 };
 </script>
 <style scoped>

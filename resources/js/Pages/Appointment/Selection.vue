@@ -80,7 +80,7 @@
 
             <button
               :disabled="!selectedDate || !selectedEspecialty || !selectedHour"
-              class="btn btn-orange mt-1 w-50 mx-auto my-1"
+              class="btn btn-orange mt-1 w-50 mx-auto my-1 hover-orange"
               id="addOption"
               @click="searchFisio"
             >
@@ -248,6 +248,9 @@ export default {
 </script>
 
 <style scoped>
+.hover-orange:hover{
+    border: 2px solid #ed6c14;
+}
 #addOption {
   padding: 0.5rem 1rem;
 }

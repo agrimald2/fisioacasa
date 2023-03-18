@@ -97,7 +97,10 @@ class AppointmentController extends Controller
         $selectedSpecialty = $request->input('selectedEspecialty');
         $selectedDate = $request->input('selectedDate');
 
-        $dayOfTheWeek = Carbon::parse($selectedDate)->dayOfWeek - 1;
+        $dayOfTheWeek = Carbon::parse($selectedDate)->dayOfWeek;
+
+        //SUNDAY FIX
+        if($dayOfTheWeek == 0){$dayOfTheWeek = 7;}
 
         $filteredSchedules = Schedule::whereHas('fisio', function ($query) use ($selectedSpecialty) {
             $query->whereHas(
@@ -107,6 +110,9 @@ class AppointmentController extends Controller
                 }
             );
         })->with('fisio')->where('start_time', $startTime)->where('week_day', $dayOfTheWeek)->get();
+
+        logs()->info('DíaDeLaSemana:'.$dayOfTheWeek);
+        logs()->info('HoraDeInicio:'.$startTime);
 
         return $filteredSchedules;
     }

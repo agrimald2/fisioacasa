@@ -3,7 +3,7 @@
     <div class="row margin-center">
       <CreateSchedules :locations="locations" />
     </div>
-    <div class="row">
+    <div class="row margin-center">
       <SeeSchedules :schedules="schedules" />
     </div>
   </FisioLayout>
@@ -15,7 +15,7 @@ import CreateSchedules from "./CreateSchedules.vue";
 import SeeSchedules from "./SeeSchedules.vue";
 
 export default {
-  props: ["locations", "schedules","fisio"],
+  props: ["locations", "schedules", "fisio"],
   components: {
     FisioLayout,
     CreateSchedules,

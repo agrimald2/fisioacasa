@@ -33,61 +33,51 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr v-for="appointment in appointments" :key="appointment.id">
                 <td>
                   <div class="d-flex px-2 py-1">
                     <div class="d-flex flex-column justify-content-center">
-                      <h6 class="mb-0 text-sm">Alonso Grimaldo</h6>
-                      <p class="text-xs text-secondary mb-0">+51 934094501</p>
+                      <h6 class="mb-0 text-sm">{{ appointment.patient.name }}</h6>
+                      <p class="text-xs text-secondary mb-0">
+                        +51 {{ appointment.patient.phone }}
+                      </p>
                     </div>
                   </div>
                 </td>
                 <td>
-                  <p class="text-xs font-weight-bold mb-0">S/ 100</p>
-                  <p class="text-xs text-secondary mb-0">+ S/15 transporte</p>
+                  <p class="text-xs font-weight-bold mb-0">
+                    S/ {{ appointment.fisio_win }}
+                  </p>
+                  <p class="text-xs text-secondary mb-0">
+                    + S/{{ appointment.transport_price }} transporte
+                  </p>
                 </td>
                 <td class="align-middle text-center text-sm">
-                  <span class="badge badge-sm bg-orange">Realizada</span>
-                </td>
-                <td class="align-middle text-center">
-                  <span class="text-secondary text-xs font-weight-bold">15/01/23</span>
-                </td>
-                <td class="align-middle">
-                  <a
-                    href="javascript:;"
-                    class="text-secondary font-weight-bold text-xs"
-                    data-toggle="tooltip"
-                    data-original-title="Ver user"
+                  <span v-if="appointment.status == 0" class="badge badge-sm bg-blue"
+                    >Confirmada</span
                   >
-                    Ver
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="d-flex px-2 py-1">
-                    <div class="d-flex flex-column justify-content-center">
-                      <h6 class="mb-0 text-sm">Carlos Lara</h6>
-                      <p class="text-xs text-secondary mb-0">+51 987641491</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <p class="text-xs font-weight-bold mb-0">S/ 100</p>
-                  <p class="text-xs text-secondary mb-0">+ S/15 transporte</p>
-                </td>
-                <td class="align-middle text-center text-sm">
-                  <span class="badge badge-sm bg-orange">Realizada</span>
+                  <span
+                    v-else-if="appointment.status == 1"
+                    class="badge badge-sm bg-orange"
+                    >Realizada</span
+                  >
+                  <span v-else class="badge badge-sm" style="background-color: red"
+                    >Anulada</span
+                  >
                 </td>
                 <td class="align-middle text-center">
-                  <span class="text-secondary text-xs font-weight-bold">23/02/23</span>
+                  <p class="text-xs font-weight-bold mb-0">{{ appointment.date }}</p>
+                  <p class="text-xs text-secondary mb-0">
+                    {{ appointment.start_time }}
+                  </p>
                 </td>
                 <td class="align-middle">
                   <a
                     href="javascript:;"
-                    class="text-secondary font-weight-bold text-xs"
+                    class="font-weight-bold text-xs btn bg-orange btn-orange"
                     data-toggle="tooltip"
                     data-original-title="Ver user"
+                    @click="seeDetails(appointment.id)"
                   >
                     Ver
                   </a>
@@ -100,7 +90,16 @@
     </div>
   </div>
 </template>
-
+<script>
+export default {
+  props: ["appointments"],
+  methods: {
+    seeDetails(id) {
+      window.location.href = "/fisio/appointment/" + id;
+    },
+  },
+};
+</script>
 <style scoped>
 .table-responsive {
   border-top: 3px solid #ed6c14;

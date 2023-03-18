@@ -11,6 +11,9 @@
       />
     </div>
   </div>
+  <pre>
+  {{ schedules }}
+  </pre>
 </template>
 <script>
 import Header from "../../../../Modules/UI/Header.vue";
@@ -28,32 +31,32 @@ export default {
       schedule: [
         {
           weekday: "Lunes",
-          weekday_number: 0,
-          schedules: [],
-        },
-        {
-          weekday: "Martes",
           weekday_number: 1,
           schedules: [],
         },
         {
-          weekday: "Miercoles",
+          weekday: "Martes",
           weekday_number: 2,
           schedules: [],
         },
         {
-          weekday: "Jueves",
+          weekday: "Miercoles",
           weekday_number: 3,
           schedules: [],
         },
         {
-          weekday: "Viernes",
+          weekday: "Jueves",
           weekday_number: 4,
           schedules: [],
         },
         {
-          weekday: "Sabado",
+          weekday: "Viernes",
           weekday_number: 5,
+          schedules: [],
+        },
+        {
+          weekday: "Sabado",
+          weekday_number: 6,
           schedules: [],
         },
         {

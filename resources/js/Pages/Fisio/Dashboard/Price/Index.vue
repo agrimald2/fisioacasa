@@ -93,7 +93,7 @@ export default {
   props: ["actual_fare", "actual_win","fisio"],
   data() {
     return {
-      amountExpected: 0,
+      amountExpected: null,
       finalAmount: 0,
       transport: 15,
       appointment_price: 0,

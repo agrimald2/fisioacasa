@@ -163,11 +163,10 @@ class FisioController extends Controller
         $fisioData = AcademicData::where('fisio_id', $fisio->id)->exists();
         $hasAcademic = $fisioData ? true : false;
         $hasDocumentation = $fisio->resume_path && $fisio->criminal_record_path && $fisio->police_record_path && $fisio->profesional_hability_path;
+        $pastAppointments = Appointment::where('fisio_id', $fisio->id)->with('patient')->where('status', 1)->get();
+        $pendingAppointments = Appointment::where('fisio_id', $fisio->id)->with('patient')->where('status', 0)->get();
 
-        $appointmentQuery = Appointment::where('fisio_id', $fisio->id)->with('patient');
-        $pendingAppointments = $appointmentQuery->where('status', 0)->get();
-        $pastAppointments = $appointmentQuery->where('status', 1)->get();
-
+        logs()->warning($pastAppointments);
 
         return Inertia::render('Fisio/Dashboard/Index', [
             'fisio' => $fisio,
@@ -359,7 +358,7 @@ class FisioController extends Controller
                 $block = new Schedule();
                 $block->fisio_id = $fisio_id;
                 $block->location_id = $request->input('location');
-                $block->week_day = $weekday;
+                $block->week_day = $weekday+1;
                 $block->start_time = $startBlock->format('H:i');
                 $block->end_time = $endBlock->format('H:i');
 

@@ -14,6 +14,7 @@
           <div class="schedule-time">
             {{ schedule.start_time }} - {{ schedule.end_time }} -
             <span class="location_tag">{{ schedule.location.name }}</span>
+            <span style="color:white"> - ELIMINAR BLOQUE</span>
           </div>
         </div>
       </div>
@@ -81,5 +82,9 @@ export default {
 }
 .see_days {
   margin-top: 1.5rem;
+}
+.schedule-block:hover {
+  background-color: darksalmon;
+  color: white;
 }
 </style>

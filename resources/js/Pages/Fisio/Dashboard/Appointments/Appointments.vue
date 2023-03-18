@@ -100,8 +100,8 @@ export default {
     return {};
   },
   methods: {
-    seeDetails(dni) {
-      window.location.href = "/fisio/appointment/" + dni;
+    seeDetails(id) {
+      window.location.href = "/fisio/appointment/" + id;
     },
   },
 };

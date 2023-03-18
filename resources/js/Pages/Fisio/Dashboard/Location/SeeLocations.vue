@@ -10,8 +10,11 @@
           class="col-12 col-md-3 margin-center"
           style="display: flex; justify-content: center; align-items: center"
         >
-          <div @click="deleteLocation(location.id)" class="btn bg-orange">
+          <div class="btn bg-orange">
             {{ location.name }}
+          </div>
+          <div @click="deleteLocation(location.id)" class="btn delete_icon">
+            <i class="fa-solid fa-trash-can"></i>
           </div>
         </div>
       </div>
@@ -47,3 +50,14 @@ export default {
   },
 };
 </script>
+<style scoped>
+.delete_icon{
+    margin-bottom: 15px;
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 12px;
+    background-color: #00699e;
+    color: white;
+    border-radius: 5px;
+}
+</style>
