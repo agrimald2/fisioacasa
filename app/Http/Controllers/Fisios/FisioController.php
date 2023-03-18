@@ -254,9 +254,6 @@ class FisioController extends Controller
 
         $fisio->save();
 
-        // Save the model to the database
-        $fisio->save();
-
         return;
     }
 
