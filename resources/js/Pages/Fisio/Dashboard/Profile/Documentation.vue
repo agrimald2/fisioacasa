@@ -81,7 +81,8 @@
                 />
               </div>
             </div>
-            <button v-if="enableButton" type="submit" class="btn btn-blue">
+            <loader v-if="loading" />
+            <button v-if="enableButton && !loading" type="submit" class="btn btn-blue">
               Subir Documentos
             </button>
           </form>
@@ -91,11 +92,17 @@
   </div>
 </template>
 <script>
+import Loader from "../../../../Modules/UI/Loader.vue";
+
 export default {
   props: ["completed"],
   setup() {},
+  components: {
+    Loader,
+  },
   data() {
     return {
+      loading: false,
       resume: null,
       criminalRecord: null,
       police_record: null,
@@ -120,6 +127,7 @@ export default {
     },
 
     async submit() {
+      this.loading = true;
       const formData = new FormData();
       formData.append("resume", this.resume);
       formData.append("criminal_record", this.criminalRecord);
@@ -127,6 +135,7 @@ export default {
       formData.append("profesional_hability", this.profesional_hability);
 
       await this.$inertia.post("/fisio/addDocumentationData", formData);
+      window.location.reload();
     },
   },
   computed: {

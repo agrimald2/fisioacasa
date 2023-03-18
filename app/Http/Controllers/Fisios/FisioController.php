@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 use App\Models\Fisio;
@@ -78,7 +79,40 @@ class FisioController extends Controller
 
         Auth::guard('fisio')->login($fisio);
 
+        $phone = '51' . $fisio->phone;
+
+        $this->sendRegister($phone);
+
         return redirect()->route('fisio.dashboard');
+    }
+
+    public function sendRegister($phone)
+    {
+        $template = 'fisio_register_test';
+        $token = env('CHATAPI_TOKEN');
+        $instanceId = env('CHATAPI_INSTANCE_ID');
+        $namespace = env('CHATAPI_NAMESPACE');
+
+        if ($token == null || $instanceId == null) {
+            return logs()->error('CHATAPI_TOKEN or CHATAPI_INSTANCE_ID not defined on .env file');
+        }
+
+        $data = [
+            'phone' => $phone,
+            'namespace' => '85489fc6_2bdc_4137_a3e6_409829280fb5',
+            'language' => [
+                'code' => 'es',
+                'policy' => 'deterministic'
+            ],
+            'template' => $template,
+        ];
+
+        $url = 'https://api.1msg.io/' . $instanceId . '/sendTemplate?token=' . $token;
+
+        $request = Http::post($url, $data);
+
+        return $request->json();
+        ;
     }
 
     public function loginForm()
@@ -223,7 +257,7 @@ class FisioController extends Controller
         // Save the model to the database
         $fisio->save();
 
-        return redirect()->back();
+        return;
     }
 
     public function sendToRevision()
@@ -432,7 +466,7 @@ class FisioController extends Controller
     public function patients()
     {
         $fisio = Auth::guard('fisio')->user();
-        $patients = Patient::whereHas('appointments.fisio', function ($query) use($fisio) {
+        $patients = Patient::whereHas('appointments.fisio', function ($query) use ($fisio) {
             $query->where('id', $fisio->id);
         })->get();
 
@@ -442,7 +476,8 @@ class FisioController extends Controller
         ]);
     }
 
-    public function profile(){
+    public function profile()
+    {
         $fisio = Auth::guard('fisio')->user();
 
         return Inertia::render('Fisio/Dashboard/Profile/Index', [

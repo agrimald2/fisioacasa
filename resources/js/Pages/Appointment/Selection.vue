@@ -87,6 +87,10 @@
               ENCONTRAR
             </button>
 
+            <div v-if="loading" class="row mt-4">
+              <loader />
+            </div>
+
             <h5 v-if="showList" class="text-center mb-2 mt-1" style="color: white">
               SELECCIONA TU FISIOTERAPEUTA
             </h5>
@@ -120,7 +124,11 @@
                         <span class="fa fa-star colored"></span>
                         <span class="fa fa-star"></span>
                       </p>
-                      <PaymentModal :appointmentInfo="schedule" :Appdate="selectedDate" :patient="patient"/>
+                      <PaymentModal
+                        :appointmentInfo="schedule"
+                        :Appdate="selectedDate"
+                        :patient="patient"
+                      />
 
                       <br />
                       <a href="#" class="moreInfo">
@@ -146,8 +154,8 @@
   </GuestLayout>
 </template>
 <script>
+import loader from "../../Modules/UI/Loader.vue";
 import axios from "axios";
-import FisioList from "./FisioList.vue";
 import GuestLayout from "../../Layouts/GuestLayout.vue";
 import FlatPickr from "vue-flatpickr-component";
 import "flatpickr/dist/flatpickr.css";
@@ -158,6 +166,7 @@ export default {
   props: ["patient", "especialties"],
   data() {
     return {
+      loading: false,
       hours: [
         "7:00",
         "7:30",
@@ -213,11 +222,12 @@ export default {
   components: {
     GuestLayout,
     FlatPickr,
-    FisioList,
     PaymentModal,
+    loader,
   },
   methods: {
     searchFisio() {
+      this.loading = true;
       axios
         .post("/appointment/searchFisio", {
           selectedHour: this.selectedHour,
@@ -227,7 +237,7 @@ export default {
         .then((response) => {
           this.showList = true;
           this.schedulesWithFisios = response.data;
-          console.table(response.data);
+          this.loading = false;
         })
         .catch((error) => {
           console.error(error);
@@ -299,7 +309,7 @@ body {
   .left_side {
     display: none;
   }
-  img {
+  .logo-img {
     width: 70%;
   }
 }

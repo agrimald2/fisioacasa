@@ -42,23 +42,23 @@
             <div class="row mt-2">
               <label for="name">NOMBRES</label>
               <input
-                class="form-control"
+                class="form-control" autocomplete="off"
                 id="name"
                 type="text"
                 placeholder="NOMBRE COMPLETO"
                 aria-label="default input example"
-                v-model="fisio.name"
+                v-model="name"
               />
             </div>
             <div class="row mt-2">
               <label for="name">APELLIDOS</label>
               <input
-                class="form-control"
+                class="form-control" autocomplete="off"
                 id="surname"
                 type="text"
                 placeholder="APELLIDOS"
                 aria-label="default input example"
-                v-model="fisio.surname"
+                v-model="surname"
               />
             </div>
             <div class="row mt-2">
@@ -67,7 +67,7 @@
                 id="birthdate"
                 class="form-control"
                 type="date"
-                v-model="fisio.birthdate"
+                v-model="birthdate"
               />
             </div>
             <div class="row mt-2">
@@ -79,14 +79,14 @@
                     value="M"
                     name="select"
                     id="option-1"
-                    v-model="fisio.sex"
+                    v-model="sex"
                   />
                   <input
                     type="radio"
                     value="F"
                     name="select"
                     id="option-2"
-                    v-model="fisio.sex"
+                    v-model="sex"
                   />
                   <label for="option-1" class="option option-1">
                     <div class="dot"></div>

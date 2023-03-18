@@ -17,8 +17,9 @@
               aria-label="default input example"
               v-model="dni"
             />
+            <loader v-if="loading" />
             <button
-              v-if="dni.length == 8"
+              v-if="dni.length == 8 && !loading"
               @click="validateDNI()"
               class="btn btn-orange mt-1"
             >
@@ -33,6 +34,7 @@
               <label for="dni">DOCUMENTO DE IDENTIDAD</label>
               <input
                 class="form-control"
+                autocomplete="off"
                 type="tel"
                 placeholder="DNI"
                 aria-label="default input example"
@@ -43,22 +45,24 @@
               <label for="name">NOMBRES</label>
               <input
                 class="form-control"
+                autocomplete="off"
                 id="name"
                 type="text"
                 placeholder="NOMBRE COMPLETO"
                 aria-label="default input example"
-                v-model="fisio.name"
+                v-model="name"
               />
             </div>
             <div class="row mt-2">
               <label for="name">APELLIDOS</label>
               <input
                 class="form-control"
+                autocomplete="off"
                 id="surname"
                 type="text"
                 placeholder="APELLIDOS"
                 aria-label="default input example"
-                v-model="fisio.surname"
+                v-model="surname"
               />
             </div>
             <div class="row mt-2">
@@ -67,7 +71,7 @@
                 id="birthdate"
                 class="form-control"
                 type="date"
-                v-model="fisio.birthdate"
+                v-model="birthdate"
               />
             </div>
             <div class="row mt-2">
@@ -79,14 +83,14 @@
                     value="M"
                     name="select"
                     id="option-1"
-                    v-model="fisio.sex"
+                    v-model="sex"
                   />
                   <input
                     type="radio"
                     value="F"
                     name="select"
                     id="option-2"
-                    v-model="fisio.sex"
+                    v-model="sex"
                   />
                   <label for="option-1" class="option option-1">
                     <div class="dot"></div>
@@ -103,6 +107,7 @@
             <div class="row mt-2">
               <label for="phone">WHATSAPP (Número Peruano)</label>
               <input
+                autocomplete="off"
                 class="form-control"
                 id="phone"
                 type="tel"
@@ -115,6 +120,7 @@
             <div class="row mt-2">
               <label for="email">EMAIL</label>
               <input
+                autocomplete="off"
                 class="form-control"
                 id="email"
                 type="tel"
@@ -137,8 +143,9 @@
                 </div>
             -->
             <div class="row mt-2">
+              <loader v-if="loading" />
               <button
-                v-if="email && phone"
+                v-if="email && phone && !loading"
                 class="btn btn-orange mt-3"
                 @click="createPatient()"
               >
@@ -152,11 +159,13 @@
   </GuestLayout>
 </template>
 <script>
+import loader from "../../Modules/UI/Loader.vue";
 import axios from "axios";
 import GuestLayout from "../../Layouts/GuestLayout.vue";
 export default {
   data() {
     return {
+      loading: false,
       dni: "",
       document: "",
       name: "",
@@ -166,17 +175,19 @@ export default {
       email: "",
       phone: "",
       //    password: "",
-
+      title: "HOLA",
       showForm: 0,
       fisio: [],
     };
   },
   components: {
     GuestLayout,
+    loader,
   },
   methods: {
     validateDNI() {
       console.log(this.dni);
+      this.loading = true;
       axios
         .get("/appointment/validateDNI", {
           params: {
@@ -186,9 +197,9 @@ export default {
         .then((response) => {
           if (response.data == "SI") {
             window.location.href = "/appointment/" + this.dni;
+            this.loading = false;
           } else if (response.data == "ANTIGUO") {
-            //TODO oldPatient View
-            console.log("ANTIGUO");
+            this.loading = false;
           } else {
             this.showForm = 1;
             this.fisio = response.data;
@@ -199,6 +210,7 @@ export default {
             this.email = response.data.email;
             this.phone = response.data.phone;
             //this.password = response.data.password;
+            this.loading = false;
           }
         })
         .catch((error) => {
@@ -207,6 +219,7 @@ export default {
     },
 
     createPatient() {
+      this.loading = true;
       axios
         .post("/appointment/createPatient", {
           document: this.dni,

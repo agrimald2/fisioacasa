@@ -71,7 +71,7 @@ export default {
       subtitle: "Busca la dirección exacta en Google Maps",
       mainIndication: "Agrega tus ubicaciones más frecuentes",
       subIndication:
-        "Elige las zonas dónde quisieras ofrecer tus servicios en un radio de hasta 7KM. Ejemplo: Tu domicilio, Centro de trabajo, etc.",
+        "Elige las zonas dónde quisieras ofrecer tus servicios en un radio de hasta 2.5KM. Ejemplo: Tu domicilio, Centro de trabajo, etc.",
       address: null,
       address_name: null,
       address_extra_info: null,

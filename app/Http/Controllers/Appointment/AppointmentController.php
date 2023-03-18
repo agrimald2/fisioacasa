@@ -165,7 +165,6 @@ class AppointmentController extends Controller
         $template = 'test_confirmation';
 
         $this->sendConfirmation($phone, $messageData, $template);
-        logs()->warning($this->sendConfirmation($phone, $messageData, $template));
 
         return $appointment->id;
     }
@@ -233,7 +232,7 @@ class AppointmentController extends Controller
 
         $request = Http::post($url, $data);
 
-        return $request->json();
+        return $request->json();;
     }
 
     public function thanks($id)

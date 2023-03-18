@@ -46,7 +46,7 @@
 //import MoreInfoFisio from './MoreInfoFisio.vue';
 export default {
   props: ["appointmentInfo", "fa"],
-  //components: { MoreInfoFisio },
+  components: {  },
   data() {
     return {
       doctors: [
@@ -130,8 +130,6 @@ p {
   background-size: cover;
   background-color: #00699e;
 }
-
-
 
 
 .modal {
