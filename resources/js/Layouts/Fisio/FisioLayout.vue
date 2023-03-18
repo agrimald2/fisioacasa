@@ -130,7 +130,7 @@ export default {
 .bottomMenu {
   position: fixed;
   width: 100vw;
-  height: 5vh;
+  height: 7vh;
   background-color: #f5f5f5;
   bottom: 0;
 
@@ -142,7 +142,7 @@ export default {
   --bs-gutter-x: 0 !important;
 }
 .main-content {
-  padding-bottom: 5vh;
+  padding-bottom: 7vh;
 }
 
 .w-10 {

@@ -210,6 +210,7 @@ export default {
     },
 
     registerFisio() {
+      this.loading = true;
       axios
         .post("/fisio/create", {
           document: this.dni,
