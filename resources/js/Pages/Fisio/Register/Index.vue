@@ -15,9 +15,9 @@
               type="tel"
               placeholder="DNI"
               aria-label="default input example"
-              size="4"
-              minlength="4"
-              maxlength="4"
+              size="8"
+              minlength="8"
+              maxlength="8"
               v-model="dni"
             />
             <loader v-if="loading" />
