@@ -81,7 +81,7 @@
                 />
               </div>
             </div>
-            <loader v-if="loading" />
+            <loader v-if="loading && !completed" />
             <button v-if="enableButton && !loading" type="submit" class="btn btn-blue">
               Subir Documentos
             </button>

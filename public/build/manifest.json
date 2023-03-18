@@ -15,140 +15,140 @@
     "file": "assets/Loader-7399ba1a.css",
     "src": "Loader.css"
   },
-  "_ActionMessage-2fb04bc5.js": {
-    "file": "assets/ActionMessage-2fb04bc5.js",
+  "_ActionMessage-c5cbcc93.js": {
+    "file": "assets/ActionMessage-c5cbcc93.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_AppLayout-34f3b934.js": {
-    "file": "assets/AppLayout-34f3b934.js",
+  "_AppLayout-f05a9be6.js": {
+    "file": "assets/AppLayout-f05a9be6.js",
     "imports": [
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_AuthenticationCard-d1ebd13b.js": {
-    "file": "assets/AuthenticationCard-d1ebd13b.js",
+  "_AuthenticationCard-e0b6a11d.js": {
+    "file": "assets/AuthenticationCard-e0b6a11d.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ]
   },
-  "_AuthenticationCardLogo-95d9dbfc.js": {
-    "file": "assets/AuthenticationCardLogo-95d9dbfc.js",
+  "_AuthenticationCardLogo-432380e1.js": {
+    "file": "assets/AuthenticationCardLogo-432380e1.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_Checkbox-6bacf8b2.js": {
-    "file": "assets/Checkbox-6bacf8b2.js",
+  "_Checkbox-14cc54cb.js": {
+    "file": "assets/Checkbox-14cc54cb.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_DangerButton-28650b96.js": {
-    "file": "assets/DangerButton-28650b96.js",
+  "_DangerButton-b95b08f4.js": {
+    "file": "assets/DangerButton-b95b08f4.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_DialogModal-2f4fd660.js": {
-    "file": "assets/DialogModal-2f4fd660.js",
+  "_DialogModal-df27725b.js": {
+    "file": "assets/DialogModal-df27725b.js",
     "imports": [
-      "_SectionTitle-c54213a5.js",
+      "_SectionTitle-e6ae4f47.js",
       "resources/js/app.js"
     ]
   },
-  "_FisioLayout-12fda047.js": {
+  "_FisioLayout-c764c0b5.js": {
     "css": [
       "assets/FisioLayout-9a19db6a.css"
     ],
-    "file": "assets/FisioLayout-12fda047.js",
+    "file": "assets/FisioLayout-c764c0b5.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js",
-      "_index-860bdaef.js"
+      "_index-6efc1dfd.js"
     ]
   },
-  "_FormSection-33f56d0d.js": {
-    "file": "assets/FormSection-33f56d0d.js",
+  "_FormSection-3950526f.js": {
+    "file": "assets/FormSection-3950526f.js",
     "imports": [
       "resources/js/app.js",
-      "_SectionTitle-c54213a5.js"
+      "_SectionTitle-e6ae4f47.js"
     ]
   },
-  "_GuestLayout-a6ab4de0.js": {
+  "_GuestLayout-6a5d578c.js": {
     "css": [
       "assets/GuestLayout-5b85d84c.css"
     ],
-    "file": "assets/GuestLayout-a6ab4de0.js",
+    "file": "assets/GuestLayout-6a5d578c.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ]
   },
-  "_Header-d4777f22.js": {
+  "_Header-352844d0.js": {
     "css": [
       "assets/Header-dc41a793.css"
     ],
-    "file": "assets/Header-d4777f22.js",
+    "file": "assets/Header-352844d0.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ]
   },
-  "_Indications-df34dd4e.js": {
-    "file": "assets/Indications-df34dd4e.js",
+  "_Indications-89e2e81f.js": {
+    "file": "assets/Indications-89e2e81f.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ]
   },
-  "_InputLabel-d6c236f4.js": {
-    "file": "assets/InputLabel-d6c236f4.js",
+  "_InputLabel-8b262014.js": {
+    "file": "assets/InputLabel-8b262014.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_Loader-078dfe57.js": {
+  "_Loader-c0281895.js": {
     "css": [
       "assets/Loader-7399ba1a.css"
     ],
-    "file": "assets/Loader-078dfe57.js",
+    "file": "assets/Loader-c0281895.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ]
   },
-  "_PrimaryButton-4588f058.js": {
-    "file": "assets/PrimaryButton-4588f058.js",
+  "_PrimaryButton-340f0ac2.js": {
+    "file": "assets/PrimaryButton-340f0ac2.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_SecondaryButton-36127629.js": {
-    "file": "assets/SecondaryButton-36127629.js",
+  "_SecondaryButton-46748a3b.js": {
+    "file": "assets/SecondaryButton-46748a3b.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_SectionBorder-996dcc3a.js": {
-    "file": "assets/SectionBorder-996dcc3a.js",
-    "imports": [
-      "__plugin-vue_export-helper-c27b6911.js",
-      "resources/js/app.js"
-    ]
-  },
-  "_SectionTitle-c54213a5.js": {
-    "file": "assets/SectionTitle-c54213a5.js",
+  "_SectionBorder-321383ee.js": {
+    "file": "assets/SectionBorder-321383ee.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ]
   },
-  "_TextInput-0c8662f2.js": {
-    "file": "assets/TextInput-0c8662f2.js",
+  "_SectionTitle-e6ae4f47.js": {
+    "file": "assets/SectionTitle-e6ae4f47.js",
+    "imports": [
+      "__plugin-vue_export-helper-c27b6911.js",
+      "resources/js/app.js"
+    ]
+  },
+  "_TextInput-e8ea988d.js": {
+    "file": "assets/TextInput-e8ea988d.js",
     "imports": [
       "resources/js/app.js"
     ]
@@ -162,14 +162,14 @@
     ],
     "file": "assets/flatpickr-396c3288.js"
   },
-  "_index-860bdaef.js": {
-    "file": "assets/index-860bdaef.js",
+  "_index-2a009fe2.js": {
+    "file": "assets/index-2a009fe2.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_index-d86cdaf4.js": {
-    "file": "assets/index-d86cdaf4.js",
+  "_index-6efc1dfd.js": {
+    "file": "assets/index-6efc1dfd.js",
     "imports": [
       "resources/js/app.js"
     ]
@@ -182,42 +182,42 @@
     "src": "flatpickr.css"
   },
   "resources/js/Pages/API/Index.vue": {
-    "file": "assets/Index-d78bd435.js",
+    "file": "assets/Index-653a0eef.js",
     "imports": [
       "resources/js/Pages/API/Partials/ApiTokenManager.vue",
-      "_AppLayout-34f3b934.js",
+      "_AppLayout-f05a9be6.js",
       "resources/js/app.js",
-      "_ActionMessage-2fb04bc5.js",
-      "_DialogModal-2f4fd660.js",
-      "_SectionTitle-c54213a5.js",
+      "_ActionMessage-c5cbcc93.js",
+      "_DialogModal-df27725b.js",
+      "_SectionTitle-e6ae4f47.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_Checkbox-6bacf8b2.js",
-      "_DangerButton-28650b96.js",
-      "_FormSection-33f56d0d.js",
-      "_TextInput-0c8662f2.js",
-      "_InputLabel-d6c236f4.js",
-      "_PrimaryButton-4588f058.js",
-      "_SecondaryButton-36127629.js",
-      "_SectionBorder-996dcc3a.js"
+      "_Checkbox-14cc54cb.js",
+      "_DangerButton-b95b08f4.js",
+      "_FormSection-3950526f.js",
+      "_TextInput-e8ea988d.js",
+      "_InputLabel-8b262014.js",
+      "_PrimaryButton-340f0ac2.js",
+      "_SecondaryButton-46748a3b.js",
+      "_SectionBorder-321383ee.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/API/Index.vue"
   },
   "resources/js/Pages/API/Partials/ApiTokenManager.vue": {
-    "file": "assets/ApiTokenManager-6a01a670.js",
+    "file": "assets/ApiTokenManager-ca712284.js",
     "imports": [
       "resources/js/app.js",
-      "_ActionMessage-2fb04bc5.js",
-      "_DialogModal-2f4fd660.js",
-      "_Checkbox-6bacf8b2.js",
-      "_DangerButton-28650b96.js",
-      "_FormSection-33f56d0d.js",
-      "_TextInput-0c8662f2.js",
-      "_InputLabel-d6c236f4.js",
-      "_PrimaryButton-4588f058.js",
-      "_SecondaryButton-36127629.js",
-      "_SectionBorder-996dcc3a.js",
-      "_SectionTitle-c54213a5.js",
+      "_ActionMessage-c5cbcc93.js",
+      "_DialogModal-df27725b.js",
+      "_Checkbox-14cc54cb.js",
+      "_DangerButton-b95b08f4.js",
+      "_FormSection-3950526f.js",
+      "_TextInput-e8ea988d.js",
+      "_InputLabel-8b262014.js",
+      "_PrimaryButton-340f0ac2.js",
+      "_SecondaryButton-46748a3b.js",
+      "_SectionBorder-321383ee.js",
+      "_SectionTitle-e6ae4f47.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
@@ -231,7 +231,7 @@
     "css": [
       "assets/FisioList-dd4c1b3a.css"
     ],
-    "file": "assets/FisioList-80db0f6c.js",
+    "file": "assets/FisioList-b3eafc89.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
@@ -241,17 +241,17 @@
   },
   "resources/js/Pages/Appointment/Index.css": {
     "file": "assets/Index-92761ab6.css",
-    "src": "resources/js/Pages/Appointment/Index.css"
+    "src": "resources/js/Pages/Fisio/Register/Index.css"
   },
   "resources/js/Pages/Appointment/Index.vue": {
     "css": [
       "assets/Index-92761ab6.css"
     ],
-    "file": "assets/Index-6fe87606.js",
+    "file": "assets/Index-55e676fa.js",
     "imports": [
-      "_Loader-078dfe57.js",
-      "_index-860bdaef.js",
-      "_GuestLayout-a6ab4de0.js",
+      "_Loader-c0281895.js",
+      "_index-6efc1dfd.js",
+      "_GuestLayout-6a5d578c.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
@@ -266,10 +266,10 @@
     "css": [
       "assets/PaymentModal-9ff1c0c5.css"
     ],
-    "file": "assets/PaymentModal-e4fa31ce.js",
+    "file": "assets/PaymentModal-67104664.js",
     "imports": [
-      "_index-860bdaef.js",
-      "_index-d86cdaf4.js",
+      "_index-6efc1dfd.js",
+      "_index-2a009fe2.js",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ],
@@ -284,16 +284,16 @@
     "css": [
       "assets/Selection-7f4f3fd2.css"
     ],
-    "file": "assets/Selection-d33fc9b2.js",
+    "file": "assets/Selection-b47a58e3.js",
     "imports": [
-      "_Loader-078dfe57.js",
-      "_index-860bdaef.js",
-      "_GuestLayout-a6ab4de0.js",
+      "_Loader-c0281895.js",
+      "_index-6efc1dfd.js",
+      "_GuestLayout-6a5d578c.js",
       "_flatpickr-396c3288.js",
       "resources/js/app.js",
       "resources/js/Pages/Appointment/PaymentModal.vue",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_index-d86cdaf4.js"
+      "_index-2a009fe2.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Appointment/Selection.vue"
@@ -306,10 +306,10 @@
     "css": [
       "assets/Thanks-63d5846a.css"
     ],
-    "file": "assets/Thanks-36517cff.js",
+    "file": "assets/Thanks-e37b7abd.js",
     "imports": [
-      "_GuestLayout-a6ab4de0.js",
-      "_index-d86cdaf4.js",
+      "_GuestLayout-6a5d578c.js",
+      "_index-2a009fe2.js",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ],
@@ -317,107 +317,107 @@
     "src": "resources/js/Pages/Appointment/Thanks.vue"
   },
   "resources/js/Pages/Auth/ConfirmPassword.vue": {
-    "file": "assets/ConfirmPassword-33a506fe.js",
+    "file": "assets/ConfirmPassword-6adbe579.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-d1ebd13b.js",
-      "_AuthenticationCardLogo-95d9dbfc.js",
-      "_TextInput-0c8662f2.js",
-      "_InputLabel-d6c236f4.js",
-      "_PrimaryButton-4588f058.js",
+      "_AuthenticationCard-e0b6a11d.js",
+      "_AuthenticationCardLogo-432380e1.js",
+      "_TextInput-e8ea988d.js",
+      "_InputLabel-8b262014.js",
+      "_PrimaryButton-340f0ac2.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ConfirmPassword.vue"
   },
   "resources/js/Pages/Auth/ForgotPassword.vue": {
-    "file": "assets/ForgotPassword-0c9633f9.js",
+    "file": "assets/ForgotPassword-b6a35c87.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-d1ebd13b.js",
-      "_AuthenticationCardLogo-95d9dbfc.js",
-      "_TextInput-0c8662f2.js",
-      "_InputLabel-d6c236f4.js",
-      "_PrimaryButton-4588f058.js",
+      "_AuthenticationCard-e0b6a11d.js",
+      "_AuthenticationCardLogo-432380e1.js",
+      "_TextInput-e8ea988d.js",
+      "_InputLabel-8b262014.js",
+      "_PrimaryButton-340f0ac2.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ForgotPassword.vue"
   },
   "resources/js/Pages/Auth/Login.vue": {
-    "file": "assets/Login-1bd8adaa.js",
+    "file": "assets/Login-dda93318.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-d1ebd13b.js",
-      "_AuthenticationCardLogo-95d9dbfc.js",
-      "_Checkbox-6bacf8b2.js",
-      "_TextInput-0c8662f2.js",
-      "_InputLabel-d6c236f4.js",
-      "_PrimaryButton-4588f058.js",
+      "_AuthenticationCard-e0b6a11d.js",
+      "_AuthenticationCardLogo-432380e1.js",
+      "_Checkbox-14cc54cb.js",
+      "_TextInput-e8ea988d.js",
+      "_InputLabel-8b262014.js",
+      "_PrimaryButton-340f0ac2.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Login.vue"
   },
   "resources/js/Pages/Auth/Register.vue": {
-    "file": "assets/Register-fe0289ca.js",
+    "file": "assets/Register-b0df5f95.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-d1ebd13b.js",
-      "_AuthenticationCardLogo-95d9dbfc.js",
-      "_Checkbox-6bacf8b2.js",
-      "_TextInput-0c8662f2.js",
-      "_InputLabel-d6c236f4.js",
-      "_PrimaryButton-4588f058.js",
+      "_AuthenticationCard-e0b6a11d.js",
+      "_AuthenticationCardLogo-432380e1.js",
+      "_Checkbox-14cc54cb.js",
+      "_TextInput-e8ea988d.js",
+      "_InputLabel-8b262014.js",
+      "_PrimaryButton-340f0ac2.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Register.vue"
   },
   "resources/js/Pages/Auth/ResetPassword.vue": {
-    "file": "assets/ResetPassword-641ee3d5.js",
+    "file": "assets/ResetPassword-4d216b6b.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-d1ebd13b.js",
-      "_AuthenticationCardLogo-95d9dbfc.js",
-      "_TextInput-0c8662f2.js",
-      "_InputLabel-d6c236f4.js",
-      "_PrimaryButton-4588f058.js",
+      "_AuthenticationCard-e0b6a11d.js",
+      "_AuthenticationCardLogo-432380e1.js",
+      "_TextInput-e8ea988d.js",
+      "_InputLabel-8b262014.js",
+      "_PrimaryButton-340f0ac2.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ResetPassword.vue"
   },
   "resources/js/Pages/Auth/TwoFactorChallenge.vue": {
-    "file": "assets/TwoFactorChallenge-9eb97b2c.js",
+    "file": "assets/TwoFactorChallenge-e8f16cb1.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-d1ebd13b.js",
-      "_AuthenticationCardLogo-95d9dbfc.js",
-      "_TextInput-0c8662f2.js",
-      "_InputLabel-d6c236f4.js",
-      "_PrimaryButton-4588f058.js",
+      "_AuthenticationCard-e0b6a11d.js",
+      "_AuthenticationCardLogo-432380e1.js",
+      "_TextInput-e8ea988d.js",
+      "_InputLabel-8b262014.js",
+      "_PrimaryButton-340f0ac2.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/TwoFactorChallenge.vue"
   },
   "resources/js/Pages/Auth/VerifyEmail.vue": {
-    "file": "assets/VerifyEmail-ccfb9e52.js",
+    "file": "assets/VerifyEmail-02b39a07.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-d1ebd13b.js",
-      "_AuthenticationCardLogo-95d9dbfc.js",
-      "_PrimaryButton-4588f058.js",
+      "_AuthenticationCard-e0b6a11d.js",
+      "_AuthenticationCardLogo-432380e1.js",
+      "_PrimaryButton-340f0ac2.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/VerifyEmail.vue"
   },
   "resources/js/Pages/Dashboard.vue": {
-    "file": "assets/Dashboard-f12d8209.js",
+    "file": "assets/Dashboard-26fe37e0.js",
     "imports": [
-      "_AppLayout-34f3b934.js",
+      "_AppLayout-f05a9be6.js",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ],
@@ -432,16 +432,16 @@
     "css": [
       "assets/AppointmentDetails-f1918e82.css"
     ],
-    "file": "assets/AppointmentDetails-30809989.js",
+    "file": "assets/AppointmentDetails-fdc147c1.js",
     "imports": [
-      "_FisioLayout-12fda047.js",
-      "_Header-d4777f22.js",
+      "_FisioLayout-c764c0b5.js",
+      "_Header-352844d0.js",
       "resources/js/Pages/Fisio/Dashboard/Appointments/ValidateAppointment.vue",
       "resources/js/Pages/Fisio/Dashboard/Appointments/AppointmentInfo.vue",
       "resources/js/Pages/Fisio/Dashboard/Appointments/HC/Evaluation.vue",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js",
-      "_index-860bdaef.js",
+      "_index-6efc1dfd.js",
       "_moment-fbc5633a.js"
     ],
     "isDynamicEntry": true,
@@ -455,7 +455,7 @@
     "css": [
       "assets/AppointmentInfo-f5a55588.css"
     ],
-    "file": "assets/AppointmentInfo-6378da5c.js",
+    "file": "assets/AppointmentInfo-80e94b93.js",
     "imports": [
       "_moment-fbc5633a.js",
       "__plugin-vue_export-helper-c27b6911.js",
@@ -465,9 +465,9 @@
     "src": "resources/js/Pages/Fisio/Dashboard/Appointments/AppointmentInfo.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/Appointments/Appointments.vue": {
-    "file": "assets/Appointments-3f2d0cc5.js",
+    "file": "assets/Appointments-e09de39c.js",
     "imports": [
-      "_index-860bdaef.js",
+      "_index-6efc1dfd.js",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ],
@@ -475,7 +475,7 @@
     "src": "resources/js/Pages/Fisio/Dashboard/Appointments/Appointments.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/Appointments/Filters.vue": {
-    "file": "assets/Filters-6935b648.js",
+    "file": "assets/Filters-4b4974e5.js",
     "imports": [
       "resources/js/app.js",
       "_flatpickr-396c3288.js",
@@ -492,9 +492,9 @@
     "css": [
       "assets/Evaluation-29be68ac.css"
     ],
-    "file": "assets/Evaluation-b9db59d0.js",
+    "file": "assets/Evaluation-41cabd42.js",
     "imports": [
-      "_index-860bdaef.js",
+      "_index-6efc1dfd.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
@@ -509,15 +509,15 @@
     "css": [
       "assets/Index-0b71134a.css"
     ],
-    "file": "assets/Index-c771f994.js",
+    "file": "assets/Index-3f2fcecd.js",
     "imports": [
-      "_FisioLayout-12fda047.js",
+      "_FisioLayout-c764c0b5.js",
       "resources/js/Pages/Fisio/Dashboard/Appointments/Filters.vue",
       "resources/js/Pages/Fisio/Dashboard/Appointments/Appointments.vue",
-      "_Header-d4777f22.js",
+      "_Header-352844d0.js",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js",
-      "_index-860bdaef.js",
+      "_index-6efc1dfd.js",
       "_flatpickr-396c3288.js"
     ],
     "isDynamicEntry": true,
@@ -531,9 +531,9 @@
     "css": [
       "assets/ValidateAppointment-457c47f6.css"
     ],
-    "file": "assets/ValidateAppointment-1dbc7705.js",
+    "file": "assets/ValidateAppointment-51d2ad79.js",
     "imports": [
-      "_index-860bdaef.js",
+      "_index-6efc1dfd.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
@@ -548,10 +548,10 @@
     "css": [
       "assets/Index-1aa77c09.css"
     ],
-    "file": "assets/Index-1af33d61.js",
+    "file": "assets/Index-9ce57454.js",
     "imports": [
       "resources/js/Pages/Fisio/Dashboard/Profile/EditProfile.vue",
-      "_FisioLayout-12fda047.js",
+      "_FisioLayout-c764c0b5.js",
       "resources/js/Pages/Fisio/Dashboard/SentInformation.vue",
       "resources/js/Pages/Fisio/Dashboard/NotApproved.vue",
       "resources/js/Pages/Fisio/Dashboard/ResumeData.vue",
@@ -560,21 +560,21 @@
       "resources/js/Pages/Fisio/Dashboard/News.vue",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js",
-      "_index-860bdaef.js",
+      "_index-6efc1dfd.js",
       "resources/js/Pages/Fisio/Dashboard/Profile/Photo.vue",
       "resources/js/Pages/Fisio/Dashboard/Profile/AcademicInfo.vue",
       "resources/js/Pages/Fisio/Dashboard/Profile/Documentation.vue",
-      "_Loader-078dfe57.js"
+      "_Loader-c0281895.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Fisio/Dashboard/Index.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/Location/CreateLocation.vue": {
-    "file": "assets/CreateLocation-ef44f736.js",
+    "file": "assets/CreateLocation-d96bd047.js",
     "imports": [
-      "_index-860bdaef.js",
-      "_Header-d4777f22.js",
-      "_Indications-df34dd4e.js",
+      "_index-6efc1dfd.js",
+      "_Header-352844d0.js",
+      "_Indications-89e2e81f.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
@@ -582,22 +582,22 @@
     "src": "resources/js/Pages/Fisio/Dashboard/Location/CreateLocation.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/Location/Index.vue": {
-    "file": "assets/Index-d814a737.js",
+    "file": "assets/Index-4143d371.js",
     "imports": [
-      "_FisioLayout-12fda047.js",
+      "_FisioLayout-c764c0b5.js",
       "resources/js/Pages/Fisio/Dashboard/Location/CreateLocation.vue",
       "resources/js/Pages/Fisio/Dashboard/Location/SeeLocations.vue",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js",
-      "_index-860bdaef.js",
-      "_Header-d4777f22.js",
-      "_Indications-df34dd4e.js"
+      "_index-6efc1dfd.js",
+      "_Header-352844d0.js",
+      "_Indications-89e2e81f.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Fisio/Dashboard/Location/Index.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/Location/SearchInput.vue": {
-    "file": "assets/SearchInput-757137b9.js",
+    "file": "assets/SearchInput-0918612d.js",
     "imports": [
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
@@ -606,10 +606,10 @@
     "src": "resources/js/Pages/Fisio/Dashboard/Location/SearchInput.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/Location/SeeLocations.vue": {
-    "file": "assets/SeeLocations-f1abe2ef.js",
+    "file": "assets/SeeLocations-f2d39ff7.js",
     "imports": [
-      "_index-860bdaef.js",
-      "_Header-d4777f22.js",
+      "_index-6efc1dfd.js",
+      "_Header-352844d0.js",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ],
@@ -624,10 +624,10 @@
     "css": [
       "assets/Login-c371e875.css"
     ],
-    "file": "assets/Login-a33cd5fa.js",
+    "file": "assets/Login-32977446.js",
     "imports": [
-      "_index-860bdaef.js",
-      "_GuestLayout-a6ab4de0.js",
+      "_index-6efc1dfd.js",
+      "_GuestLayout-6a5d578c.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
@@ -635,7 +635,7 @@
     "src": "resources/js/Pages/Fisio/Dashboard/Login.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/News.vue": {
-    "file": "assets/News-86a47ecc.js",
+    "file": "assets/News-34ae02da.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
@@ -644,7 +644,7 @@
     "src": "resources/js/Pages/Fisio/Dashboard/News.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/NotApproved.vue": {
-    "file": "assets/NotApproved-25cd51dc.js",
+    "file": "assets/NotApproved-afbca761.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
@@ -660,7 +660,7 @@
     "css": [
       "assets/PastAppointments-eaf3efe6.css"
     ],
-    "file": "assets/PastAppointments-46a0ab11.js",
+    "file": "assets/PastAppointments-e92f13d0.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
@@ -676,13 +676,13 @@
     "css": [
       "assets/Index-aed98554.css"
     ],
-    "file": "assets/Index-3eb68295.js",
+    "file": "assets/Index-87d6ee9a.js",
     "imports": [
-      "_FisioLayout-12fda047.js",
-      "_Header-d4777f22.js",
+      "_FisioLayout-c764c0b5.js",
+      "_Header-352844d0.js",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js",
-      "_index-860bdaef.js"
+      "_index-6efc1dfd.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Fisio/Dashboard/Patients/Index.vue"
@@ -695,7 +695,7 @@
     "css": [
       "assets/PendingAppointments-2b51a31b.css"
     ],
-    "file": "assets/PendingAppointments-3eea4f2e.js",
+    "file": "assets/PendingAppointments-e7fcbbf9.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
@@ -704,12 +704,12 @@
     "src": "resources/js/Pages/Fisio/Dashboard/PendingAppointments.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/Price/Index.vue": {
-    "file": "assets/Index-96258b5c.js",
+    "file": "assets/Index-ffeeb502.js",
     "imports": [
-      "_index-860bdaef.js",
-      "_FisioLayout-12fda047.js",
-      "_Header-d4777f22.js",
-      "_Indications-df34dd4e.js",
+      "_index-6efc1dfd.js",
+      "_FisioLayout-c764c0b5.js",
+      "_Header-352844d0.js",
+      "_Indications-89e2e81f.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
@@ -724,9 +724,9 @@
     "css": [
       "assets/AcademicInfo-fcafec87.css"
     ],
-    "file": "assets/AcademicInfo-ff2df4ec.js",
+    "file": "assets/AcademicInfo-9ec00540.js",
     "imports": [
-      "_index-860bdaef.js",
+      "_index-6efc1dfd.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
@@ -734,16 +734,16 @@
     "src": "resources/js/Pages/Fisio/Dashboard/Profile/AcademicInfo.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/Profile/Documentation.css": {
-    "file": "assets/Documentation-f4e59eed.css",
+    "file": "assets/Documentation-4d03c05f.css",
     "src": "resources/js/Pages/Fisio/Dashboard/Profile/Documentation.css"
   },
   "resources/js/Pages/Fisio/Dashboard/Profile/Documentation.vue": {
     "css": [
-      "assets/Documentation-f4e59eed.css"
+      "assets/Documentation-4d03c05f.css"
     ],
-    "file": "assets/Documentation-6fbd8fbd.js",
+    "file": "assets/Documentation-86ecfa5f.js",
     "imports": [
-      "_Loader-078dfe57.js",
+      "_Loader-c0281895.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
@@ -758,15 +758,15 @@
     "css": [
       "assets/EditProfile-3d12bcac.css"
     ],
-    "file": "assets/EditProfile-978765ce.js",
+    "file": "assets/EditProfile-ab806fbd.js",
     "imports": [
-      "_index-860bdaef.js",
+      "_index-6efc1dfd.js",
       "resources/js/Pages/Fisio/Dashboard/Profile/Photo.vue",
       "resources/js/Pages/Fisio/Dashboard/Profile/AcademicInfo.vue",
       "resources/js/Pages/Fisio/Dashboard/Profile/Documentation.vue",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js",
-      "_Loader-078dfe57.js"
+      "_Loader-c0281895.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Fisio/Dashboard/Profile/EditProfile.vue"
@@ -779,7 +779,7 @@
     "css": [
       "assets/Photo-b52c1a6e.css"
     ],
-    "file": "assets/Photo-daf5581a.js",
+    "file": "assets/Photo-1111c742.js",
     "imports": [
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
@@ -795,7 +795,7 @@
     "css": [
       "assets/ResumeData-33cf0223.css"
     ],
-    "file": "assets/ResumeData-3550f0fd.js",
+    "file": "assets/ResumeData-379bd7bb.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
@@ -811,11 +811,11 @@
     "css": [
       "assets/CreateSchedules-f554cf53.css"
     ],
-    "file": "assets/CreateSchedules-a7b62741.js",
+    "file": "assets/CreateSchedules-13c50a9d.js",
     "imports": [
-      "_Header-d4777f22.js",
-      "_Indications-df34dd4e.js",
-      "_index-860bdaef.js",
+      "_Header-352844d0.js",
+      "_Indications-89e2e81f.js",
+      "_index-6efc1dfd.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
@@ -830,9 +830,9 @@
     "css": [
       "assets/DaySchedule-41fbf2da.css"
     ],
-    "file": "assets/DaySchedule-76d340ad.js",
+    "file": "assets/DaySchedule-43b50b9a.js",
     "imports": [
-      "_index-860bdaef.js",
+      "_index-6efc1dfd.js",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ],
@@ -840,16 +840,16 @@
     "src": "resources/js/Pages/Fisio/Dashboard/Schedule/DaySchedule.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/Schedule/Index.vue": {
-    "file": "assets/Index-e332241f.js",
+    "file": "assets/Index-e9211692.js",
     "imports": [
-      "_FisioLayout-12fda047.js",
+      "_FisioLayout-c764c0b5.js",
       "resources/js/Pages/Fisio/Dashboard/Schedule/CreateSchedules.vue",
       "resources/js/Pages/Fisio/Dashboard/Schedule/SeeSchedules.vue",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js",
-      "_index-860bdaef.js",
-      "_Header-d4777f22.js",
-      "_Indications-df34dd4e.js",
+      "_index-6efc1dfd.js",
+      "_Header-352844d0.js",
+      "_Indications-89e2e81f.js",
       "resources/js/Pages/Fisio/Dashboard/Schedule/DaySchedule.vue",
       "_moment-fbc5633a.js"
     ],
@@ -857,20 +857,20 @@
     "src": "resources/js/Pages/Fisio/Dashboard/Schedule/Index.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/Schedule/SeeSchedules.vue": {
-    "file": "assets/SeeSchedules-79a8f2f5.js",
+    "file": "assets/SeeSchedules-d3d36144.js",
     "imports": [
-      "_Header-d4777f22.js",
+      "_Header-352844d0.js",
       "resources/js/Pages/Fisio/Dashboard/Schedule/DaySchedule.vue",
       "_moment-fbc5633a.js",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js",
-      "_index-860bdaef.js"
+      "_index-6efc1dfd.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Fisio/Dashboard/Schedule/SeeSchedules.vue"
   },
   "resources/js/Pages/Fisio/Dashboard/SentInformation.vue": {
-    "file": "assets/SentInformation-dceaeed7.js",
+    "file": "assets/SentInformation-2140da4a.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
@@ -880,17 +880,17 @@
   },
   "resources/js/Pages/Fisio/Register/Index.css": {
     "file": "assets/Index-92761ab6.css",
-    "src": "resources/js/Pages/Appointment/Index.css"
+    "src": "resources/js/Pages/Fisio/Register/Index.css"
   },
   "resources/js/Pages/Fisio/Register/Index.vue": {
     "css": [
       "assets/Index-92761ab6.css"
     ],
-    "file": "assets/Index-036857be.js",
+    "file": "assets/Index-a8006d41.js",
     "imports": [
-      "_Loader-078dfe57.js",
-      "_index-860bdaef.js",
-      "_GuestLayout-a6ab4de0.js",
+      "_Loader-c0281895.js",
+      "_index-6efc1dfd.js",
+      "_GuestLayout-6a5d578c.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
@@ -898,120 +898,120 @@
     "src": "resources/js/Pages/Fisio/Register/Index.vue"
   },
   "resources/js/Pages/PrivacyPolicy.vue": {
-    "file": "assets/PrivacyPolicy-6501d4a8.js",
+    "file": "assets/PrivacyPolicy-6759ba7b.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCardLogo-95d9dbfc.js"
+      "_AuthenticationCardLogo-432380e1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/PrivacyPolicy.vue"
   },
   "resources/js/Pages/Profile/Partials/DeleteUserForm.vue": {
-    "file": "assets/DeleteUserForm-3f5e471c.js",
+    "file": "assets/DeleteUserForm-eb28989b.js",
     "imports": [
       "resources/js/app.js",
-      "_DialogModal-2f4fd660.js",
-      "_DangerButton-28650b96.js",
-      "_TextInput-0c8662f2.js",
-      "_SecondaryButton-36127629.js",
-      "_SectionTitle-c54213a5.js",
+      "_DialogModal-df27725b.js",
+      "_DangerButton-b95b08f4.js",
+      "_TextInput-e8ea988d.js",
+      "_SecondaryButton-46748a3b.js",
+      "_SectionTitle-e6ae4f47.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.vue"
   },
   "resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue": {
-    "file": "assets/LogoutOtherBrowserSessionsForm-056c08a8.js",
+    "file": "assets/LogoutOtherBrowserSessionsForm-8d4879eb.js",
     "imports": [
       "resources/js/app.js",
-      "_ActionMessage-2fb04bc5.js",
-      "_DialogModal-2f4fd660.js",
-      "_TextInput-0c8662f2.js",
-      "_PrimaryButton-4588f058.js",
-      "_SecondaryButton-36127629.js",
-      "_SectionTitle-c54213a5.js",
+      "_ActionMessage-c5cbcc93.js",
+      "_DialogModal-df27725b.js",
+      "_TextInput-e8ea988d.js",
+      "_PrimaryButton-340f0ac2.js",
+      "_SecondaryButton-46748a3b.js",
+      "_SectionTitle-e6ae4f47.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue"
   },
   "resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue": {
-    "file": "assets/TwoFactorAuthenticationForm-e2994339.js",
+    "file": "assets/TwoFactorAuthenticationForm-b4936fd3.js",
     "imports": [
       "resources/js/app.js",
-      "_DialogModal-2f4fd660.js",
-      "_TextInput-0c8662f2.js",
-      "_PrimaryButton-4588f058.js",
-      "_SecondaryButton-36127629.js",
-      "_DangerButton-28650b96.js",
-      "_InputLabel-d6c236f4.js",
-      "_SectionTitle-c54213a5.js",
+      "_DialogModal-df27725b.js",
+      "_TextInput-e8ea988d.js",
+      "_PrimaryButton-340f0ac2.js",
+      "_SecondaryButton-46748a3b.js",
+      "_DangerButton-b95b08f4.js",
+      "_InputLabel-8b262014.js",
+      "_SectionTitle-e6ae4f47.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue"
   },
   "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue": {
-    "file": "assets/UpdatePasswordForm-88ff0776.js",
+    "file": "assets/UpdatePasswordForm-becb213a.js",
     "imports": [
       "resources/js/app.js",
-      "_ActionMessage-2fb04bc5.js",
-      "_FormSection-33f56d0d.js",
-      "_TextInput-0c8662f2.js",
-      "_InputLabel-d6c236f4.js",
-      "_PrimaryButton-4588f058.js",
-      "_SectionTitle-c54213a5.js",
+      "_ActionMessage-c5cbcc93.js",
+      "_FormSection-3950526f.js",
+      "_TextInput-e8ea988d.js",
+      "_InputLabel-8b262014.js",
+      "_PrimaryButton-340f0ac2.js",
+      "_SectionTitle-e6ae4f47.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue"
   },
   "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue": {
-    "file": "assets/UpdateProfileInformationForm-3a7bbf4f.js",
+    "file": "assets/UpdateProfileInformationForm-a363bbb7.js",
     "imports": [
       "resources/js/app.js",
-      "_ActionMessage-2fb04bc5.js",
-      "_FormSection-33f56d0d.js",
-      "_TextInput-0c8662f2.js",
-      "_InputLabel-d6c236f4.js",
-      "_PrimaryButton-4588f058.js",
-      "_SecondaryButton-36127629.js",
-      "_SectionTitle-c54213a5.js",
+      "_ActionMessage-c5cbcc93.js",
+      "_FormSection-3950526f.js",
+      "_TextInput-e8ea988d.js",
+      "_InputLabel-8b262014.js",
+      "_PrimaryButton-340f0ac2.js",
+      "_SecondaryButton-46748a3b.js",
+      "_SectionTitle-e6ae4f47.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue"
   },
   "resources/js/Pages/Profile/Show.vue": {
-    "file": "assets/Show-daba494f.js",
+    "file": "assets/Show-261f9b95.js",
     "imports": [
-      "_AppLayout-34f3b934.js",
+      "_AppLayout-f05a9be6.js",
       "resources/js/Pages/Profile/Partials/DeleteUserForm.vue",
       "resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue",
-      "_SectionBorder-996dcc3a.js",
+      "_SectionBorder-321383ee.js",
       "resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue",
       "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue",
       "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_DialogModal-2f4fd660.js",
-      "_SectionTitle-c54213a5.js",
-      "_DangerButton-28650b96.js",
-      "_TextInput-0c8662f2.js",
-      "_SecondaryButton-36127629.js",
-      "_ActionMessage-2fb04bc5.js",
-      "_PrimaryButton-4588f058.js",
-      "_InputLabel-d6c236f4.js",
-      "_FormSection-33f56d0d.js"
+      "_DialogModal-df27725b.js",
+      "_SectionTitle-e6ae4f47.js",
+      "_DangerButton-b95b08f4.js",
+      "_TextInput-e8ea988d.js",
+      "_SecondaryButton-46748a3b.js",
+      "_ActionMessage-c5cbcc93.js",
+      "_PrimaryButton-340f0ac2.js",
+      "_InputLabel-8b262014.js",
+      "_FormSection-3950526f.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Show.vue"
   },
   "resources/js/Pages/TermsOfService.vue": {
-    "file": "assets/TermsOfService-bc217c72.js",
+    "file": "assets/TermsOfService-eed9ff14.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCardLogo-95d9dbfc.js"
+      "_AuthenticationCardLogo-432380e1.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/TermsOfService.vue"
@@ -1024,7 +1024,7 @@
     "css": [
       "assets/Welcome-665689a9.css"
     ],
-    "file": "assets/Welcome-24779a2a.js",
+    "file": "assets/Welcome-05e01d3b.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -1095,7 +1095,7 @@
       "resources/js/Pages/TermsOfService.vue",
       "resources/js/Pages/Welcome.vue"
     ],
-    "file": "assets/app-3a67eac5.js",
+    "file": "assets/app-3bf74c65.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
