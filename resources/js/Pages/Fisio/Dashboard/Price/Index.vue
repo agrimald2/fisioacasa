@@ -72,7 +72,8 @@
               <p class="list">Te damos S/15 para que te movilices</p>
               <p class="list">% De nuestra comisión</p>
               <p class="list">Gastos de la plataforma</p>
-              <button @click="updatePrice" class="btn bg-orange mt-2">
+              <loader v-if="loading" />
+              <button v-if="!loading" @click="updatePrice" class="btn bg-orange mt-2">
                 GUARDAR TARIFA - S/{{ finalAmount }}
               </button>
             </div>
@@ -84,15 +85,16 @@
 </template>
 <script>
 import axios from "axios";
-
+import loader from "../../../../Modules/UI/Loader.vue";
 import FisioterapeutasLayout from "../../../../Layouts/Fisio/FisioLayout.vue";
 import Header from "../../../../Modules/UI/Header.vue";
 import Indications from "../../../../Modules/UI/Indications.vue";
 
 export default {
-  props: ["actual_fare", "actual_win","fisio"],
+  props: ["actual_fare", "actual_win", "fisio"],
   data() {
     return {
+      loading: false,
       amountExpected: null,
       finalAmount: 0,
       transport: 15,
@@ -134,18 +136,20 @@ export default {
   },
   methods: {
     updatePrice() {
-      axios
-        .post(`/fisio/updatePrice`, {
-          appointment_price: this.appointment_price,
-          fisio_price: this.amountExpected,
-          transport_price: this.transport,
-        })
-        .then((response) => {
-          window.location.reload();
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+      (this.loading = true),
+        axios
+          .post(`/fisio/updatePrice`, {
+            appointment_price: this.appointment_price,
+            fisio_price: this.amountExpected,
+            transport_price: this.transport,
+          })
+          .then((response) => {
+            this.loading = false;
+            window.location.reload();
+          })
+          .catch((error) => {
+            console.error(error);
+          });
     },
   },
 };

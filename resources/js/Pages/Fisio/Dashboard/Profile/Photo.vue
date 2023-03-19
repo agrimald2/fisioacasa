@@ -83,6 +83,7 @@ export default {
       }
     },
     async save() {
+      this.loading = true;
       const formData = new FormData();
       formData.append("photo", this.photoFile);
 
@@ -92,6 +93,7 @@ export default {
         },
       });
       // Reload the page or update the profile data;
+      window.location.reload();
     },
   },
 };

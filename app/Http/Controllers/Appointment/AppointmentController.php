@@ -93,10 +93,9 @@ class AppointmentController extends Controller
 
     public function searchFisio(Request $request)
     {
-        $schedules = Schedule::query()->with('fisio')->get();
         $fisios = Fisio::query()->with('academicData')->get();
 
-        $startTime = $request->input('selectedHour');
+        $startTime = Carbon::parse($request->input('selectedHour'))->format('H:i');
         $selectedSpecialty = $request->input('selectedEspecialty');
         $selectedDate = $request->input('selectedDate');
 
@@ -107,6 +106,8 @@ class AppointmentController extends Controller
             $dayOfTheWeek = 7;
         }
 
+
+
         $filteredSchedules = Schedule::whereHas('fisio', function ($query) use ($selectedSpecialty) {
             $query->whereHas(
                 'academicData',
@@ -114,7 +115,7 @@ class AppointmentController extends Controller
                     $query->where('especialty', 'LIKE', $selectedSpecialty);
                 }
             );
-        })->with('fisio')->where('start_time', $startTime)->where('week_day', $dayOfTheWeek)->get();
+        })->with('fisio')->where('week_day', $dayOfTheWeek)->where('start_time', $startTime)->get();
 
         return $filteredSchedules;
     }
