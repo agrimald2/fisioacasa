@@ -13,6 +13,7 @@
         "laravel/jetstream": "^3.0",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
+        "openpay/sdk": "^3.0",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {

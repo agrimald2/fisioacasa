@@ -1,7 +1,7 @@
 <template>
   <FisioterapeutasLayout :fisio="fisio">
     <Header :title="title" :subtitle="subtitle" />
-    <div v-if="appointment.status == 0" class="row">
+    <div v-if="appointment.status == 0" class="row margin-center">
       <div v-if="!displayForm" class="col-12 col-md-4">
         <div class="card mb-4 mb-xl-0 orange-border">
           <div class="card-body text-center">

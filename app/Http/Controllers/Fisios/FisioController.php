@@ -350,7 +350,7 @@ class FisioController extends Controller
                 $block = new Schedule();
                 $block->fisio_id = $fisio_id;
                 $block->location_id = $request->input('location');
-                $block->week_day = $weekday+1;
+                $block->week_day = $weekday + 1;
                 $block->start_time = $startBlock->format('H:i');
                 $block->end_time = $endBlock->format('H:i');
 
@@ -421,27 +421,25 @@ class FisioController extends Controller
         $clinicalHistory = new ClinicalHistory;
 
 
-        $bodyParts = implode(',', $request->input('body_regions'));
-        $recomendations = implode(',', $request->input('recomendations'));
+        //$bodyParts = implode(',', $request->input('body_regions'));
+        //$recomendations = implode(',', $request->input('recomendations'));
 
 
         $clinicalHistory->appointment_id = $request->input('appointment_id');
         $clinicalHistory->fisio_id = $fisio->id;
         $clinicalHistory->patient_id = $request->input('patient_id');
-        $clinicalHistory->ectoscopy = $request->input('ectoscopy');
-        $clinicalHistory->general_status = $request->input('general_status');
-        $clinicalHistory->observation = $request->input('observation');
+
+        $clinicalHistory->consult_reason = $request->input('consult_reason');
         $clinicalHistory->disease_time = $request->input('disease_time');
         $clinicalHistory->start_way = $request->input('start_way');
-        $clinicalHistory->anamnesis = $request->input('anamnesis');
-        $clinicalHistory->initial_patient_status = $request->input('initial_patient_status');
-        $clinicalHistory->applied_techniques = $request->input('applied_techniques');
-        $clinicalHistory->body_regions = $bodyParts;
-        $clinicalHistory->recomendations = $recomendations;
-        $clinicalHistory->final_patient_status = $request->input('final_patient_status');
-        $clinicalHistory->wellness_1 = $request->input('wellness_1');
-        $clinicalHistory->wellness_2 = $request->input('wellness_2');
-        $clinicalHistory->wellness_3 = $request->input('wellness_3');
+        $clinicalHistory->evaluation = $request->input('evaluation');
+        $clinicalHistory->fisio_diagnostic = $request->input('fisio_diagnostic');
+        $clinicalHistory->treatment = $request->input('treatment');
+        $clinicalHistory->evolution = $request->input('evolution');
+        $clinicalHistory->recomendations = $request->input('recomendations');
+        $clinicalHistory->w_pain = $request->input('w_pain');
+        $clinicalHistory->w_movility = $request->input('w_movility');
+        $clinicalHistory->w_strength = $request->input('w_strength');
 
         $clinicalHistory->save();
 

@@ -117,6 +117,7 @@ class AppointmentController extends Controller
             );
         })->with('fisio')->where('week_day', $dayOfTheWeek)->where('start_time', $startTime)->get();
 
+        logs()->info($startTime);
         return $filteredSchedules;
     }
 
@@ -271,9 +272,15 @@ class AppointmentController extends Controller
         return $locations;
     }
 
-    public function getPatientLocation(Request $request){
+    public function getPatientLocation(Request $request)
+    {
         $location = PatientLocation::find($request->input('location_id'));
 
         return $location;
+    }
+
+    public function getPaymentModal()
+    {
+        return Inertia::render('Appointment/FormPayment');
     }
 }

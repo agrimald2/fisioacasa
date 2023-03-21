@@ -13,30 +13,16 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="col-xl-6 col-sm-4 mb-xl-0 mb-4 mt-2 margin-center">
     <div class="card">
       <div class="card-body p-3">
         <div class="row">
           <div class="numbers">
-            <p class="text-sm mb-0 text-capitalize font-weight-bold">Enfermedad Actual</p>
-
-            <label for="edad" class="mt-2">Tiempo de la Enfermedad</label>
-
-            <select class="form-control" v-model="disease_time">
-              <option value="De 1 a 5 años">De 1 a 5 años</option>
-              <option value="De 7 a 10 años">De 7 a 10 años</option>
-              <option value="De 11 a 15 años">De 11 a 15 años</option>
-              <option value="Más de 16 años">Más de 16 años</option>
-            </select>
-
-            <label for="estado">Inicio de enfermedad</label>
-            <br />
-            <select class="form-control" v-model="start_way">
-              <option value="Brusco">Brusco</option>
-              <option value="Brusco">Insidioso</option>
-            </select>
-
-            <label for="edad">Anamnesis</label>
-            <textarea class="form-control text-area" name="" id="" v-model="anamnesis" />
+            <p class="text-sm mb-0 text-capitalize font-weight-bold">
+              Motivo de consulta
+            </p>
+            <textarea class="form-control text-area" name="" id="" v-model="consult_reason" />
           </div>
         </div>
       </div>
@@ -48,48 +34,9 @@
         <div class="row">
           <div class="numbers">
             <p class="text-sm mb-0 text-capitalize font-weight-bold">
-              Evaluación inicial
+              Tiempo de enfermedad
             </p>
-            <label for="edad" class="mt-2">¿Cómo encontraste al paciente?</label>
-            <input type="text" class="form-control" v-model="initial_patient_status" />
-
-            <label for="edad" class="mt-2">Ectoscopía (De 5 en 5)</label>
-            <input type="tel" class="form-control" v-model="ectoscopy" />
-
-            <label for="estado">Estado general</label>
-            <br />
-            <select class="form-control" v-model="general_status">
-              <option value="Bueno">Bueno</option>
-              <option value="Malo">Malo</option>
-              <option value="Regular">Regular</option>
-            </select>
-
-            <label for="edad" class="mt-4">Observación</label>
-            <textarea class="form-control text-area" v-model="observation" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-xl-6 col-sm-4 mb-xl-0 mb-4 mt-2 margin-center">
-    <div class="card">
-      <div class="card-body p-3">
-        <div class="row">
-          <div class="numbers">
-            <p class="text-sm mb-0 text-capitalize font-weight-bold">Realizado</p>
-            <label for="edad" class="mt-2">¿Qué técnica aplicaste?</label>
-            <input type="text" class="form-control" v-model="applied_techniques" />
-
-            <label for="edad" class="mt-4">Regiones del cuerpo tratadas</label>
-            <Multiselect
-              v-model="body_regions"
-              :options="bodyParts"
-              mode="tags"
-              :close-on-select="false"
-              :searchable="true"
-              :create-option="true"
-            ></Multiselect>
+            <textarea class="form-control text-area" name="" id="" v-model="disease_time" />
           </div>
         </div>
       </div>
@@ -100,30 +47,80 @@
       <div class="card-body p-3">
         <div class="row">
           <div class="numbers">
-            <p class="text-sm mb-0 text-capitalize font-weight-bold">Situación Final</p>
-            <label for="edad" class="mt-4">¿Cómo dejaste al paciente?</label>
-            <textarea
-              class="form-control text-area"
-              id=""
-              v-model="final_patient_status"
-            />
-
-            <label for="edad" class="mt-4">Recomendaciones</label>
-            <Multiselect
-              v-model="selectedRecomendations"
-              :options="recomendations"
-              mode="tags"
-              :close-on-select="false"
-              :searchable="true"
-              :create-option="true"
-            ></Multiselect>
+            <p class="text-sm mb-0 text-capitalize font-weight-bold">Forma de inicio</p>
+            <textarea class="form-control text-area" name="" id="" v-model="start_way" />
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="col-12 mb-xl-0 mb-4 mt-2 margin-center">
+  <div class="col-xl-6 col-sm-4 mb-xl-0 mb-4 mt-2 margin-center">
+    <div class="card">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="numbers">
+            <p class="text-sm mb-0 text-capitalize font-weight-bold">
+              Evaluación (Exploración)
+            </p>
+            <textarea class="form-control text-area" name="" id="" v-model="evaluation" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 col-sm-4 mb-xl-0 mb-4 mt-2 margin-center">
+    <div class="card">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="numbers">
+            <p class="text-sm mb-0 text-capitalize font-weight-bold">
+              Diagnóstico Fisioterapéutico
+            </p>
+            <textarea class="form-control text-area" name="" id="" v-model="fisio_diagnostic" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 col-sm-4 mb-xl-0 mb-4 mt-2 margin-center">
+    <div class="card">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="numbers">
+            <p class="text-sm mb-0 text-capitalize font-weight-bold">
+              Programa de tratamiento
+            </p>
+            <textarea class="form-control text-area" name="" id="" v-model="treatment" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 col-sm-4 mb-xl-0 mb-4 mt-2 margin-center">
+    <div class="card">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="numbers">
+            <p class="text-sm mb-0 text-capitalize font-weight-bold">Evolución</p>
+            <textarea class="form-control text-area" name="" id="" v-model="evolution" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 col-sm-4 mb-xl-0 mb-4 mt-2 margin-center">
+    <div class="card">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="numbers">
+            <p class="text-sm mb-0 text-capitalize font-weight-bold">Recomendaciones</p>
+            <textarea class="form-control text-area" name="" id="" v-model="recomendations" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 col-12 mb-xl-0 mb-4 mt-2 margin-center">
     <div class="card">
       <div class="card-body p-3">
         <div class="row">
@@ -133,16 +130,16 @@
             </p>
             <div class="row">
               <div class="col-xl-4 col-12">
-                <label for="">Tolerancia al dolor</label>
-                <input type="number" class="form-control" v-model="wellness_1" />
+                <label for="">Tolerancia al dolor (EVA)</label>
+                <input type="number" class="form-control" v-model="w_pain" />
               </div>
               <div class="col-xl-4 col-12">
-                <label for="">Movilidad - Flexibilidad</label>
-                <input type="number" class="form-control" v-model="wellness_2" />
+                <label for="">Movilidad</label>
+                <input type="number" class="form-control" v-model="w_movility" />
               </div>
               <div class="col-xl-4 col-12">
                 <label for="">Fuerza</label>
-                <input type="number" class="form-control" v-model="wellness_3" />
+                <input type="number" class="form-control" v-model="w_strength" />
               </div>
             </div>
           </div>
@@ -164,6 +161,8 @@ export default {
   },
   data() {
     return {
+      appointment_id: this.appointment_id,
+      patient_id: this.patient_id,
       value: "",
       selectedRecomendations: [],
       bodyParts: [
@@ -183,25 +182,18 @@ export default {
         "Tobillo",
         "Pie",
       ],
-      recomendations: [
-        "Realizar Ejercicio de estiramientos",
-        "Caminar 30 minutos al día",
-      ],
-      appointment_id: this.appointment_id,
-      patient_id: this.patient_id,
-      ectoscopy: null,
-      general_status: null,
-      observation: null,
+
+      consult_reason: null,
       disease_time: null,
       start_way: null,
-      anamnesis: null,
-      initial_patient_status: null,
-      applied_techniques: null,
-      body_regions: [],
-      final_patient_status: null,
-      wellness_1: null,
-      wellness_2: null,
-      wellness_3: null,
+      evaluation: null,
+      fisio_diagnostic: null,
+      treatment: null,
+      evolution: null,
+      recomendations: null,
+      w_pain: null,
+      w_movility: null,
+      w_strength: null,
     };
   },
   methods: {
@@ -210,20 +202,17 @@ export default {
         .post(`/fisio/createClinicalHistory`, {
           appointment_id: this.appointment_id,
           patient_id: this.patient_id,
-          ectoscopy: this.ectoscopy,
-          general_status: this.general_status,
-          observation: this.observation,
+          consult_reason: this.consult_reason,
           disease_time: this.disease_time,
           start_way: this.start_way,
-          anamnesis: this.anamnesis,
-          initial_patient_status: this.initial_patient_status,
-          applied_techniques: this.applied_techniques,
-          body_regions: this.body_regions,
-          final_patient_status: this.final_patient_status,
-          recomendations: this.selectedRecomendations,
-          wellness_1: this.wellness_1,
-          wellness_2: this.wellness_2,
-          wellness_3: this.wellness_3,
+          evaluation: this.evaluation,
+          fisio_diagnostic: this.fisio_diagnostic,
+          treatment: this.treatment,
+          evolution: this.evolution,
+          recomendations: this.recomendations,
+          w_pain: this.w_pain,
+          w_movility: this.w_movility,
+          w_strength: this.w_strength,
         })
         .then((response) => {
           window.location.reload();

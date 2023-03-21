@@ -233,7 +233,7 @@
                         <span class="fa fa-star colored"></span>
                         <span class="fa fa-star"></span>
                       </p>
-                      <PaymentModal
+                      <FormPayment
                         :appointmentInfo="schedule"
                         :Appdate="selectedDate"
                         :patient="patient"
@@ -270,7 +270,7 @@ import GuestLayout from "../../Layouts/GuestLayout.vue";
 import FlatPickr from "vue-flatpickr-component";
 import "flatpickr/dist/flatpickr.css";
 import { Spanish } from "flatpickr/dist/l10n/es.js";
-import PaymentModal from "./PaymentModal.vue";
+import FormPayment from "./FormPayment.vue";
 
 export default {
   props: ["patient", "especialties", "locations"],
@@ -334,8 +334,8 @@ export default {
   components: {
     GuestLayout,
     FlatPickr,
-    PaymentModal,
     loader,
+    FormPayment
   },
   methods: {
     searchFisio() {

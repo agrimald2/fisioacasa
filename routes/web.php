@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -68,7 +69,7 @@ Route::prefix('fisio')
         Route::get('/profile', [FisioController::class, 'profile']);
     });
 
-    Route::prefix('appointment')
+Route::prefix('appointment')
     ->name('appointment.')
     ->group(function () {
         Route::get('/', [AppointmentController::class, 'index'])->name('index');
@@ -81,3 +82,18 @@ Route::prefix('fisio')
         Route::post('/addPatientLocation', [AppointmentController::class, 'addPatientLocation']);
         Route::get('/getPatientLocation', [AppointmentController::class, 'getPatientLocation']);
     });
+
+
+
+Route::prefix('admin')
+    ->name('admin.')
+    ->group(function () {
+        Route::get('/fisios', [AdminController::class, 'getFisios'])->name('fisios');
+        Route::get('/fisio/{id}', [AdminController::class, 'fisioDetails']);
+        Route::get('/fisio/downloadFiles', [AdminController::class, 'downloadFiles']);
+        Route::post('/fisios/deny', [AdminController::class, 'fisioDeny']);
+        Route::post('/fisios/approve', [AdminController::class, 'fisioApprove']);
+    });
+
+
+Route::get('/getPaymentModal', [AppointmentController::class, 'getPaymentModal']);
