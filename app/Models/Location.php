@@ -12,11 +12,14 @@ class Location extends Model
     use SoftDeletes;
 
     protected $fillable = [
+        'fisio_id',
         'name',
         'address',
         'latitude',
         'longitude',
-        'fisio_id',
-        'extra_info'
+        'urbanization',
+        'distric',
+        'city',
+        'postal_code',
     ];
 }

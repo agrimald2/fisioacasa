@@ -83,7 +83,7 @@
             >
               <i class="fas fa-bars"></i>
             </div>
-            <span class="nav-link-text ms-1">Precios</span>
+            <span class="nav-link-text ms-1">Tarifa</span>
           </a>
         </li>
         <li class="nav-item">

@@ -97,11 +97,34 @@
                                 >
                                 <input
                                   id="search-input"
-                                  v-model="address"
                                   type="text"
                                   class="form-control"
                                   placeholder="Calle fisioacasa 123"
+                                  ref="autocompleteSearch"
                                 />
+                              </div>
+                              <div v-if="place" class="row">
+                                <div class="col-6 col-md-4">
+                                  <label for="search-input">N°</label>
+                                  <input
+                                    id="search-input"
+                                    v-model="address_number"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Nombre"
+                                  />
+                                </div>
+                                <div class="col-6 col-md-8">
+                                  <label for="search-input">LOCALIDAD</label>
+                                  <input
+                                    id="search-input"
+                                    disabled
+                                    v-model="place.address_components[2].long_name"
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Nombre"
+                                  />
+                                </div>
                               </div>
                               <div class="col-12 col-md-12">
                                 <label class="location_label" for="search-input"
@@ -271,6 +294,7 @@ import FlatPickr from "vue-flatpickr-component";
 import "flatpickr/dist/flatpickr.css";
 import { Spanish } from "flatpickr/dist/l10n/es.js";
 import FormPayment from "./FormPayment.vue";
+import { ref } from "vue";
 
 export default {
   props: ["patient", "especialties", "locations"],
@@ -329,13 +353,19 @@ export default {
       selectedEspecialty: null,
       schedulesWithFisios: null,
       locations: this.locations,
+      address: null,
+      address_name: null,
+      place: null,
+      selectedLat: null,
+      selectedLng: null,
+      address_number: null,
     };
   },
   components: {
     GuestLayout,
     FlatPickr,
     loader,
-    FormPayment
+    FormPayment,
   },
   methods: {
     searchFisio() {
@@ -373,6 +403,36 @@ export default {
           console.error(error);
         });
     },
+    initAutocomplete() {
+      const input = this.$refs.autocompleteSearch;
+
+      //Initially Limit to Lima
+      const limaBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(-12.3553, -77.1908), // southwest corner of boundary
+        new google.maps.LatLng(-11.7233, -76.6338) // northeast corner of boundary
+      );
+
+      const options = {
+        componentRestrictions: { country: "PE" },
+        bounds: limaBounds,
+        strictBounds: true,
+        types: ["geocode"],
+      };
+
+      const autocomplete = new google.maps.places.Autocomplete(input, options);
+
+      autocomplete.addListener("place_changed", () => {
+        const place = autocomplete.getPlace();
+        this.place = place;
+        this.selectedAddress = place.formatted_address;
+        this.selectedLat = place.geometry.location.lat();
+        this.selectedLng = place.geometry.location.lng();
+        this.address_number = place.address_components[0].long_name;
+      });
+    },
+  },
+  mounted() {
+    this.initAutocomplete();
   },
 };
 </script>
@@ -457,5 +517,35 @@ body {
   .logo-img {
     width: 70%;
   }
+}
+
+.pac-container {
+  /*background-color: #ed6c14 !important;*/
+  background-color: #efeeef !important;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  max-height: 300px;
+  overflow-y: scroll;
+  text-transform: uppercase;
+  color: white !important;
+}
+
+.pac-container::-webkit-scrollbar {
+  display: none;
+}
+
+.pac-icon {
+  display: none;
+  background-color: red; /*Color*/
+}
+.pac-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pac-item:hover {
+  background-color: #f5f5f5;
 }
 </style>

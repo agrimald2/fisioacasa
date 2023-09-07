@@ -90,13 +90,13 @@ export default {
   methods: {
     go(id) {
       console.log("Hola");
-      window.location.href = "/admin/fisio/"+id;
+      window.location.href = "/admin/fisio/" + id;
     },
   },
 };
 </script>
 <style scoped>
-.pointer{
-    cursor: pointer;
+.pointer {
+  cursor: pointer;
 }
 </style>

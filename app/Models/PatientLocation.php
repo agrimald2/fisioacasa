@@ -12,11 +12,18 @@ class PatientLocation extends Model
     use SoftDeletes;
 
     protected $fillable = [
+        'patient_id',
         'name',
+        'extra_info',
         'address',
         'latitude',
         'longitude',
-        'patient_id',
-        'extra_info'
+        'street_number',
+        'street_name',
+        'urbanization',
+        'distric',
+        'city',
+        'postal_code',
+        'maps_url',
     ];
 }

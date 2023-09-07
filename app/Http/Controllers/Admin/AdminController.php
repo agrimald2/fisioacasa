@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Appointment;
 use App\Models\Fisio;
+use App\Models\Patient;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -22,12 +24,18 @@ class AdminController extends Controller
 
     public function getPatients()
     {
-
+        $patients = Patient::get();
+        return Inertia::render('Admin/Patients/Index', [
+            'patients' => $patients,
+        ]);
     }
 
     public function getAppointments()
     {
-
+        $appointments = Appointment::get();
+        return Inertia::render('Admin/Patients/Index', [
+            'appointments' => $appointments,
+        ]);
     }
 
     public function fisioDetails($id)

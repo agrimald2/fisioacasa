@@ -71,7 +71,7 @@
               <h5 class="mt-4">¿QUÉ INCLUYE EL PRECIO FINAL?</h5>
               <p class="list">Te damos S/15 para que te movilices</p>
               <p class="list">% De nuestra comisión</p>
-              <p class="list">Gastos de la plataforma</p>
+              <p class="list">Gastos de la plataforma (IGV | Pasarela de Pagos)</p>
               <loader v-if="loading" />
               <button v-if="!loading" @click="updatePrice" class="btn bg-orange mt-2">
                 GUARDAR TARIFA - S/{{ finalAmount }}
@@ -99,8 +99,8 @@ export default {
       finalAmount: 0,
       transport: 15,
       appointment_price: 0,
-      comision: 20,
-      gateawayComision: 4,
+      comision: 10,
+      gateawayComision: 3.5,
       title: "Agrega tu precio",
       subtitle: "Este será tu precio por sesión inicial",
       mainIndication: "¿CUÁNTO QUIERES GANAR?",

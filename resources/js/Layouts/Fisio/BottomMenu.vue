@@ -19,7 +19,7 @@
           >
             <svg
               class="h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
-              fill="white"
+                 fill="white"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"

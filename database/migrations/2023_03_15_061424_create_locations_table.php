@@ -16,11 +16,13 @@ return new class extends Migration {
             $table->id();
             $table->integer('fisio_id');
             $table->string('name');
-            $table->string('extra_info')->nullable();
             $table->string('address')->nullable();
-            $table->double('latitude')->nullable();
-            $table->double('longitude')->nullable();
-
+            $table->string('latitude')->default('-12.104818');
+            $table->string('longitude')->default('-77.013206');
+            $table->string('urbanization')->default('Lima');
+            $table->string('distric')->default('Lima');
+            $table->string('city')->default('Lima');
+            $table->string('postal_code')->default('15036');
             $table->softDeletes();
             $table->timestamps();
         });
