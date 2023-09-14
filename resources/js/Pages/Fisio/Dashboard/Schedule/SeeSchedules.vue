@@ -11,9 +11,6 @@
       />
     </div>
   </div>
-  <pre>
-  {{ schedules }}
-  </pre>
 </template>
 <script>
 import Header from "../../../../Modules/UI/Header.vue";
