@@ -15,21 +15,20 @@ class UniversitySeeder extends Seeder
     public function run()
     {
         $universities = [
-            'Universidad Nacional Mayor de San Marcos',
-            'Universidad Nacional Federico Villarreal',
-            'Universidad Privada Cayetano Heredia',
-            'Universidad Peruana de Ciencias Aplicadas',
-            'Universidad Privada Norbert Wiener',
-            'Universidad Privada del Norte',
-            'Universidad Privada San Juan Bautista',
-            'Universidad Católica Sedes Sapientiae',
-            'Universidad Privada Arzobispo Loayza',
-            'Universidad de Chiclayo',
-            'Universidad Peruana Los Andes',
-            'Universidad Inca Garcilaso de la Vega',
-            'Universidad Tecnológica del Perú',
-            'Universidad Alas Peruanas',
-            'Otra'
+            'Universidad Peruana Cayetano Heredia (UPCH)',
+            'Universidad Peruana de Ciencias Aplicadas (UPC)',
+            'Universidad Privada del Norte (UPN)',
+            'Universidad Privada San Juan Bautista (UPSJB)',
+            'Universidad Nacional Federico Villarreal (UNFV)',
+            'Universidad Tecnológica del Perú (UTP)',
+            'Universidad Nacional Toribio Rodríguez de Mendoza de Amazonas (UNTRM)',
+            'Universidad de Chiclayo (UDCH)',
+            'Universidad Peruana Los Andes (UPLA)',
+            'Universidad Norbert Wiener (UWIENER)',
+            'Universidad Católica Sedes Sapientiae (UCSS)',
+            'Universidad Continental (UCONTINENTAL)',
+            'Universidad Nacional Mayor de San marcos (UNMSM)',
+            'Otras'
         ];
 
         for ($i = 0; $i < count($universities); $i++) {
