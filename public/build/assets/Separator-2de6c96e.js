@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper-c27b6911.js";import{e as o,o as r}from"./app-090398bb.js";const t={},c={class:"border-t my-12 lg:my-24 lg:max-w-5xl lg:mx-auto"};function a(s,n){return r(),o("div",c)}const l=e(t,[["render",a]]);export{l as default};
