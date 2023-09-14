@@ -133,7 +133,7 @@ export default {
           urbanization: this.place.address_components[2].long_name,
           distric: this.place.address_components[3].long_name,
           city: this.place.address_components[5].long_name,
-          postal_code: this.place.address_components[7].long_name,
+          postal_code: 123456,
         })
         .then((response) => {
           window.location.reload();
