@@ -15,6 +15,7 @@ class EspecialtySeeder extends Seeder
     public function run()
     {
         $especialties = [
+            'Fisioterapia general',
             'Fisioterapia manual ortopédica',
             'Fisioterapia respiratoria',
             'Fisioterapia estética',
@@ -24,7 +25,6 @@ class EspecialtySeeder extends Seeder
             'Fisioterapia deportiva',
             'Fisioterapia pediátrica',
             'Fisioterapia geriátrica',
-            'Fisioterapia general',
             'Terapias alternativas',
             'Preparación física'
         ];

@@ -27,7 +27,7 @@ class UniversitySeeder extends Seeder
             'Universidad Norbert Wiener (UWIENER)',
             'Universidad Católica Sedes Sapientiae (UCSS)',
             'Universidad Continental (UCONTINENTAL)',
-            'Universidad Nacional Mayor de San marcos (UNMSM)',
+            'Universidad Nacional Mayor de San Marcos (UNMSM)',
             'Otras'
         ];
 

@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZeSHDWQNCCw7pCvb2DpQ_gYk2hn6rPmg&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQEkgR2Ffi3pCdIHlJ-Dau9cgIkFcngSo&libraries=places"></script>
 
     <!-- Scripts -->
     @routes

@@ -106,7 +106,7 @@
               class="btn btn-next mt-3 bg-blue"
               style="background"
             >
-              Agregar Nuevo Grado
+              Guardar
             </button>
           </div>
         </div>
