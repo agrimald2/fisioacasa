@@ -39,7 +39,7 @@
           />
         </label>
         <div v-if="!loading" class="small font-italic mb-4 color-blue">
-          Selecciona una foto JPG or PNG
+          Selecciona una foto JPG o PNG
         </div>
         <div v-else class="small font-italic mb-4 color-orange">
           Foto Subida con éxito!

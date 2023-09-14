@@ -1,13 +1,13 @@
 <template>
   <h5 style="text-align: center">
-    Por favor, <i>completa tus datos</i> para proceder al siguiente paso
+    Por favor, completa tus datos para proceder al siguiente paso
   </h5>
   <div class="row no-pd margin-center">
     <div class="col-md-4 col-12">
       <Photo :photoUrl="fisio.profile_photo_path" :fisioName="fisio.name" />
     </div>
     <div class="col-md-8 col-12">
-      <div class="card">*Acá debería ir un Tutorial*</div>
+      <!-- <div class="card">*Acá debería ir un Tutorial*</div>-->
     </div>
 
     <div class="col-md-6 col 12 info_container">

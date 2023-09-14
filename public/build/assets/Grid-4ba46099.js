@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper-c27b6911.js";import{e as o,a as r,r as a,o as t}from"./app-8988990b.js";const c={},l={class:"mx-auto lg:max-w-5xl"},d={class:"grid gap-4 lg:gap-x-6 xl:gap-x-8 grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"};function i(s,n){return t(),o("div",l,[r("div",d,[a(s.$slots,"default")])])}const x=e(c,[["render",i]]);export{x as default};
