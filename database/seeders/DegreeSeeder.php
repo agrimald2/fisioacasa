@@ -16,9 +16,9 @@ class DegreeSeeder extends Seeder
     {
         $degrees = ['Bachiller', 'Licenciado', 'Magister', 'Doctor'];
 
-        for ($i = 0; $i < count($degrees); $i++) {
+        foreach ($degrees as $degree) {
             Degree::create([
-                'name' => $degrees[$i],
+                'name' => $degree,
             ]);
         }
 
